@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Come Mingle, Bring Your Singles · Friday June 19 · Schoolyard · Denver</title>
+<meta name="description" content="Come Mingle, Bring Your Singles — a friends-of-friends mingle night at Schoolyard Beer Hall in Denver. Friday June 19, 5–9 PM. Wristbands at the door. Fresh Barbershop on-site. Dating in person.">
+<meta property="og:title" content="Come Mingle, Bring Your Singles · Fri Jun 19 · Schoolyard Denver">
+<meta property="og:description" content="Friends of friends. Wristbands at the door. Fresh Barbershop on-site. 100 spots, 21+, no cover. Dating in person.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bringyoursingles.com/">
+<style>
+  :root {
+    --black: #0A0A0A;
+    --black-soft: #131313;
+    --pink: #FF2E63;
+    --pink-deep: #E12855;
+    --green: #08F26E;
+    --yellow: #FFD400;
+    --cream: #F8F2E4;
+    --cream-dim: #DDD6C8;
+    --blue: #3D7BB8;
+    --sans: 'Helvetica Neue', 'Arial Black', Helvetica, Arial, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--sans);
+    background: var(--black);
+    color: var(--cream);
+    line-height: 1.55;
+    background-image: radial-gradient(circle, rgba(255,46,99,0.18) 0.6px, transparent 0.8px);
+    background-size: 22px 22px;
+    overflow-x: hidden;
+  }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 28px; }
+  a { color: var(--pink); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* Top wristband bar */
+  .topbar {
+    background: var(--black);
+    color: var(--cream);
+    padding: 12px 24px;
+    text-align: center;
+    font-size: 13px;
+    letter-spacing: 5px;
+    font-weight: 900;
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--pink);
+  }
+  .topbar .stripes { display: inline-flex; gap: 5px; margin-right: 16px; vertical-align: middle; }
+  .topbar .stripes span { width: 22px; height: 9px; }
+
+  /* Nav */
+  nav {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 22px 0;
+  }
+  .brand-mark {
+    font-weight: 900; line-height: 1; color: var(--pink);
+    font-size: 22px; letter-spacing: -0.5px;
+  }
+  .brand-mark span { display: block; font-size: 10px; letter-spacing: 4px; color: var(--green); margin-top: 4px; font-weight: 900; }
+  nav ul { list-style: none; display: flex; gap: 28px; align-items: center; }
+  nav ul a { color: var(--cream); font-weight: 900; font-size: 13px; letter-spacing: 3px; text-transform: uppercase; }
+  nav .cta {
+    background: var(--pink); color: var(--black); padding: 12px 22px;
+    border-radius: 999px; font-weight: 900; letter-spacing: 3px; font-size: 12px;
+    text-transform: uppercase;
+  }
+  nav .cta:hover { background: var(--green); text-decoration: none; }
+
+  /* Hero */
+  .hero {
+    text-align: center;
+    padding: 70px 0 80px;
+    position: relative;
+  }
+  .hero .stickers { display: flex; justify-content: space-between; max-width: 800px; margin: 0 auto 30px; }
+  .sticker {
+    background: var(--pink); color: var(--black);
+    padding: 12px 28px; font-weight: 900; font-size: 22px;
+    letter-spacing: 2px; text-transform: uppercase;
+    transform: rotate(-6deg); display: inline-block;
+  }
+  .sticker.cream { background: var(--cream); transform: rotate(7deg); }
+
+  .hero h1 {
+    font-family: var(--sans);
+    font-weight: 900;
+    color: var(--pink);
+    line-height: 0.92;
+    letter-spacing: -3px;
+    margin: 16px 0;
+  }
+  .hero h1 .l1 { display: block; font-size: clamp(54px, 9vw, 120px); }
+  .hero h1 .l2 { display: block; font-size: clamp(64px, 10vw, 140px); }
+  .hero h1 .l3 {
+    display: block; font-size: clamp(96px, 16vw, 220px);
+    -webkit-text-stroke: 3px var(--black);
+  }
+  .hero .tagline {
+    color: var(--green); font-weight: 900;
+    font-size: clamp(18px, 2.6vw, 28px); letter-spacing: 8px;
+    margin-top: 8px; text-transform: uppercase;
+  }
+  .hero .pitch {
+    margin-top: 24px; font-size: clamp(16px, 2vw, 22px);
+    color: var(--cream); max-width: 700px; margin-left: auto; margin-right: auto;
+    font-weight: 500;
+  }
+  .hero .pitch em { font-style: italic; color: var(--cream-dim); }
+
+  .hero .stamp {
+    display: inline-block; background: var(--pink); color: var(--black);
+    padding: 16px 40px; font-weight: 900; letter-spacing: 3px;
+    font-size: clamp(20px, 3vw, 32px); margin-top: 36px;
+  }
+  .hero .where {
+    display: block; margin-top: 14px;
+    font-size: 16px; letter-spacing: 5px; font-weight: 700; color: var(--cream);
+  }
+  .hero .meta {
+    display: block; margin-top: 6px;
+    font-size: 13px; letter-spacing: 5px; font-weight: 900; color: var(--green);
+  }
+  .hero .rsvp {
+    display: inline-block; margin-top: 28px;
+    background: var(--green); color: var(--black);
+    padding: 18px 50px; font-weight: 900; letter-spacing: 4px;
+    font-size: 16px; text-transform: uppercase; border-radius: 999px;
+    transition: all 0.15s;
+  }
+  .hero .rsvp:hover { background: var(--pink); color: var(--black); text-decoration: none; }
+  .hero .countdown {
+    margin-top: 18px; font-size: 13px; letter-spacing: 4px; color: var(--cream-dim); font-weight: 700;
+  }
+  .hero .countdown #days { color: var(--pink); font-size: 18px; font-weight: 900; }
+
+  /* Sections */
+  section { padding: 90px 0; border-top: 2px solid var(--pink); }
+  section.alt { background: var(--black-soft); }
+  section h2 {
+    font-family: var(--sans); font-weight: 900;
+    font-size: clamp(36px, 6vw, 64px); color: var(--pink);
+    text-align: center; margin-bottom: 8px; letter-spacing: -1px;
+    -webkit-text-stroke: 1.5px var(--black);
+  }
+  .kicker { text-align: center; font-size: 13px; letter-spacing: 8px; font-weight: 900; color: var(--green); margin-bottom: 8px; text-transform: uppercase; }
+  .lead { text-align: center; max-width: 720px; margin: 12px auto 50px; font-size: 18px; color: var(--cream); font-weight: 500; }
+
+  /* Hooks grid */
+  .grid4 {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px;
+  }
+  .card {
+    background: var(--cream); color: var(--black);
+    padding: 28px 18px; text-align: center;
+    border: 3px solid var(--cream); transition: all 0.2s;
+  }
+  .card.green { background: var(--green); }
+  .card.yellow { background: var(--yellow); }
+  .card.blue { background: var(--blue); color: var(--cream); }
+  .card .num {
+    display: inline-block; width: 44px; height: 44px; line-height: 38px;
+    border: 3px solid var(--black); border-radius: 50%;
+    font-weight: 900; font-size: 20px; margin-bottom: 14px;
+  }
+  .card.blue .num { border-color: var(--cream); }
+  .card h3 { font-weight: 900; letter-spacing: 3px; font-size: 14px; text-transform: uppercase; margin-bottom: 10px; }
+  .card p { font-size: 14px; line-height: 1.5; }
+
+  /* Wristbands */
+  .bands { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; max-width: 880px; margin: 0 auto; }
+  .band {
+    text-align: center; padding: 24px 14px;
+    background: var(--cream); color: var(--black);
+    border: 3px solid var(--black);
+  }
+  .band .pill {
+    display: inline-block; width: 100%; max-width: 160px; height: 36px;
+    border-radius: 18px; margin-bottom: 16px;
+    border: 3px solid var(--black);
+  }
+  .band h4 { font-size: 14px; letter-spacing: 3px; font-weight: 900; text-transform: uppercase; }
+  .band p { font-size: 13px; color: #2C2C2C; margin-top: 6px; }
+
+  /* Schedule */
+  .timeline { max-width: 740px; margin: 0 auto; }
+  .timeline .row {
+    display: grid; grid-template-columns: 110px 1fr;
+    gap: 24px; padding: 22px 0;
+    border-bottom: 1px dashed var(--pink);
+  }
+  .timeline .row:last-child { border-bottom: none; }
+  .timeline .time { font-weight: 900; font-size: 28px; color: var(--green); letter-spacing: 1px; }
+  .timeline h4 { font-size: 14px; letter-spacing: 3px; font-weight: 900; color: var(--pink); text-transform: uppercase; margin-bottom: 4px; }
+  .timeline p { font-size: 15px; color: var(--cream-dim); }
+
+  /* FAQ */
+  .faq { max-width: 760px; margin: 0 auto; }
+  details {
+    border-bottom: 1px solid var(--pink);
+    padding: 20px 0;
+  }
+  details[open] summary { color: var(--green); }
+  summary {
+    font-weight: 900; font-size: 20px;
+    cursor: pointer; list-style: none; position: relative;
+    padding-right: 36px; letter-spacing: -0.5px;
+    color: var(--cream);
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::after {
+    content: '+'; position: absolute; right: 0; top: -2px;
+    font-size: 30px; color: var(--pink);
+    transition: transform 0.15s;
+  }
+  details[open] summary::after { content: '−'; color: var(--green); }
+  details p { margin-top: 12px; font-size: 16px; color: var(--cream-dim); line-height: 1.6; }
+
+  /* RSVP block */
+  .rsvp-block {
+    text-align: center;
+    background: var(--pink);
+    color: var(--black);
+    padding: 100px 24px;
+    border-top: none;
+  }
+  .rsvp-block h2 { color: var(--black); -webkit-text-stroke: 0; }
+  .rsvp-block .lead { color: var(--black); }
+  .rsvp-block .kicker { color: var(--black); }
+  .rsvp-block .btn {
+    display: inline-block; background: var(--black); color: var(--green);
+    padding: 24px 70px; font-weight: 900; letter-spacing: 4px;
+    font-size: 20px; text-transform: uppercase; margin-top: 14px;
+    border-radius: 999px;
+  }
+  .rsvp-block .btn:hover { background: var(--green); color: var(--black); text-decoration: none; }
+  .rsvp-block .small { display: block; margin-top: 22px; font-size: 13px; letter-spacing: 4px; font-weight: 900; }
+
+  /* Footer */
+  footer { background: var(--black); padding: 56px 0 44px; text-align: center; border-top: 2px solid var(--pink); }
+  footer .cobrand {
+    font-weight: 900; letter-spacing: 4px;
+    font-size: 18px; margin-bottom: 14px; color: var(--cream);
+  }
+  footer .links { font-size: 13px; letter-spacing: 4px; font-weight: 700; }
+  footer .links a { margin: 0 14px; color: var(--green); }
+  footer .copy { margin-top: 24px; font-size: 12px; opacity: 0.5; color: var(--cream); letter-spacing: 2px; }
+
+  /* Mobile */
+  @media (max-width: 760px) {
+    nav ul { display: none; }
+    nav .cta { padding: 10px 16px; font-size: 11px; letter-spacing: 2px; }
+    .hero { padding: 40px 0 60px; }
+    .hero .stickers { gap: 20px; }
+    .sticker { padding: 8px 18px; font-size: 16px; }
+    .hero .tagline { letter-spacing: 4px; }
+    .grid4 { grid-template-columns: 1fr 1fr; gap: 12px; }
+    .bands { grid-template-columns: 1fr 1fr; }
+    section { padding: 60px 0; }
+    .timeline .row { grid-template-columns: 80px 1fr; gap: 14px; }
+    .timeline .time { font-size: 22px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Top bar with wristband stripes -->
+<div class="topbar">
+  <span class="stripes">
+    <span style="background:#08F26E"></span>
+    <span style="background:#FF2E63"></span>
+    <span style="background:#FFD400"></span>
+    <span style="background:#3D7BB8"></span>
+  </span>
+  Friday June 19 · 5–9 PM · Schoolyard Beer Hall · Denver
+</div>
+
+<!-- Nav -->
+<header class="wrap">
+  <nav>
+    <div class="brand-mark">
+      COME MINGLE, BRING YOUR SINGLES
+      <span>EST. 2026 · DENVER · VOL. 1</span>
+    </div>
+    <ul>
+      <li><a href="#what">What it is</a></li>
+      <li><a href="#wristbands">Wristbands</a></li>
+      <li><a href="#schedule">Schedule</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a class="cta" href="#rsvp">RSVP</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Hero -->
+<section class="hero" style="border-top: none;">
+  <div class="wrap">
+    <div class="stickers">
+      <div class="sticker">No apps.</div>
+      <div class="sticker cream">Show up.</div>
+    </div>
+    <h1>
+      <span class="l1">COME MINGLE,</span>
+      <span class="l2">BRING YOUR</span>
+      <span class="l3">SINGLES.</span>
+    </h1>
+    <div class="tagline">— Dating in person —</div>
+    <p class="pitch">A Friday-night mingle for friends of friends. <em>No swiping, no bios, no "wyd."</em> Just wristbands at the door, a beer hall, and 100 people who are also done with their phone.</p>
+    <div class="stamp">FRI · JUN 19 · 5–9 PM</div>
+    <div class="where">SCHOOLYARD BEER HALL · DENVER</div>
+    <div class="meta">21+ · NO COVER · 100 SPOTS</div>
+    <br>
+    <a class="rsvp" href="#rsvp">Save my spot →</a>
+    <div class="countdown"><span id="days">—</span> DAYS TO GO</div>
+  </div>
+</section>
+
+<!-- What it is -->
+<section id="what" class="alt">
+  <div class="wrap">
+    <div class="kicker">— What's waiting for you —</div>
+    <h2>Tired of the apps?<br>So are we.</h2>
+    <p class="lead">No swiping. No bios. No "wyd." Just real faces, real drinks, and a beer hall full of people who are also done with their phone. Couples welcome — bring the singles you've been trying to set up for years.</p>
+    <div class="grid4">
+      <div class="card">
+        <div class="num">1</div>
+        <h3>Wristbands</h3>
+        <p>Color-coded at the door — single, taken, curious, ally. You'll know who's who in three seconds.</p>
+      </div>
+      <div class="card green">
+        <div class="num">2</div>
+        <h3>Fresh On-Site</h3>
+        <p>Fresh Barbershop is doing chair-side touch-ups, beard cleanups, and a photo wall. Show up looking like a person.</p>
+      </div>
+      <div class="card yellow">
+        <div class="num">3</div>
+        <h3>Raffles All Night</h3>
+        <p>Fresh services, Schoolyard tabs, and partner swag. Two drawings, must be present to win.</p>
+      </div>
+      <div class="card blue">
+        <div class="num">4</div>
+        <h3>100 Spots Only</h3>
+        <p>Friends-of-friends only, capped at 100. Real curation, not a free-for-all.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Wristband legend -->
+<section id="wristbands">
+  <div class="wrap">
+    <div class="kicker">— Wristband legend —</div>
+    <h2>How the room works.</h2>
+    <p class="lead">No name tags. No icebreaker games unless you want them. Just a wristband that does the awkward part for you.</p>
+    <div class="bands">
+      <div class="band">
+        <div class="pill" style="background:#08F26E"></div>
+        <h4>Single</h4>
+        <p>Open to meeting new people.</p>
+      </div>
+      <div class="band">
+        <div class="pill" style="background:#FF2E63"></div>
+        <h4>Taken</h4>
+        <p>Here for the vibe. Don't @ me.</p>
+      </div>
+      <div class="band">
+        <div class="pill" style="background:#FFD400"></div>
+        <h4>Open / Curious</h4>
+        <p>Open to a conversation. We'll see.</p>
+      </div>
+      <div class="band">
+        <div class="pill" style="background:#3D7BB8"></div>
+        <h4>Ally</h4>
+        <p>Came with a friend. Here for it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Schedule -->
+<section id="schedule" class="alt">
+  <div class="wrap">
+    <div class="kicker">— Schedule —</div>
+    <h2>How the night runs.</h2>
+    <div class="timeline">
+      <div class="row">
+        <div class="time">5:00</div>
+        <div>
+          <h4>Doors + Wristbands</h4>
+          <p>Walk in, grab a wristband, grab a beer. Fresh's photo wall is up. Music kicks in.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="time">5:30</div>
+        <div>
+          <h4>Mingle</h4>
+          <p>Conversation prompts on the tables if you want them — totally optional. The room does the work.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="time">6:30</div>
+        <div>
+          <h4>First Raffle</h4>
+          <p>Drawing for a Fresh Barbershop service + Schoolyard tab. Must be present to win.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="time">7:30</div>
+        <div>
+          <h4>Fresh Chair Time</h4>
+          <p>Quick on-site beard touch-ups and clean-ups, courtesy of Fresh. First come, first served.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="time">8:30</div>
+        <div>
+          <h4>Last Call &amp; Final Raffle</h4>
+          <p>One more drawing. Group photo. Trade numbers the old-fashioned way.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="time">9:00</div>
+        <div>
+          <h4>After-Mingle</h4>
+          <p>Doors stay open at Schoolyard. Most groups roll into a longer night nearby — we'll point you somewhere.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="kicker">— Questions —</div>
+    <h2>You probably want to ask.</h2>
+    <div class="faq">
+      <details>
+        <summary>Is this speed dating?</summary>
+        <p>No. There's no rotating chairs, no name tags, no buzzer. It's a beer hall full of people who are open to meeting people, with wristbands so you don't have to ask awkward questions. You can mingle, sit with your friends, ignore everyone — it's a Friday night.</p>
+      </details>
+      <details>
+        <summary>I'm in a couple. Can I come?</summary>
+        <p>Yes — and you should. The whole concept is "friends of friends." Couples are the best matchmakers. Bring the single friend you've been meaning to set up for the last three years. Show up wearing red wristbands so single people know.</p>
+      </details>
+      <details>
+        <summary>Why "Dating in person"?</summary>
+        <p>Because the apps got us nowhere. Every Friday night we've been swiping in the same five-mile radius, ignoring the actual humans inside it. This night is just an excuse to put your phone down and look around.</p>
+      </details>
+      <details>
+        <summary>What's the catch?</summary>
+        <p>None. It's free, it's 21+, no cover. We cap RSVPs at 100 because the curation is the whole point — we want a room full of friends-of-friends, not a public bar event.</p>
+      </details>
+      <details>
+        <summary>Do I have to RSVP?</summary>
+        <p>Yes — please. We're capped at 100, and it helps Schoolyard plan staffing and Fresh plan chair time. Walk-ins are welcome only if we haven't hit cap.</p>
+      </details>
+      <details>
+        <summary>Is it 21+?</summary>
+        <p>Yes. Schoolyard is a beer hall. Bring ID.</p>
+      </details>
+      <details>
+        <summary>What should I wear?</summary>
+        <p>Whatever you'd wear to a beer hall on a Friday night. We're not running a gala. Jeans are a yes. Cute top is a yes. The shirt you stole from your roommate is a yes. If you can't be trusted with your hair, Fresh's chair opens at 7:30.</p>
+      </details>
+      <details>
+        <summary>What if I don't know anyone?</summary>
+        <p>Then this is the event for you. Friends of friends means every group started with someone who showed up alone. Grab a wristband, grab a drink, you'll be talking to someone in five minutes.</p>
+      </details>
+      <details>
+        <summary>Where exactly is Schoolyard?</summary>
+        <p>Schoolyard Beer Hall, Denver. Confirm the exact address with the venue's website. We'll add a Google Maps link in the RSVP confirmation email.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- RSVP -->
+<section id="rsvp" class="rsvp-block">
+  <div class="wrap">
+    <div class="kicker">— RSVP —</div>
+    <h2>100 spots. Save yours.</h2>
+    <p class="lead">Free. Friends of friends only. Locks in your wristband for the door.</p>
+    <a class="btn" href="#" onclick="alert('Replace this link with your Partiful or Eventbrite URL before publishing.'); return false;">RSVP on Partiful →</a>
+    <span class="small">Friday June 19 · 5–9 PM · Schoolyard Beer Hall · Denver · 21+ · No cover</span>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="cobrand">SCHOOLYARD ✕ FRESH BARBERSHOP DENVER</div>
+    <div class="links">
+      <a href="https://instagram.com/bringyoursingles" target="_blank">@bringyoursingles</a>
+      <a href="https://instagram.com/fresh_barbershop_denver" target="_blank">@fresh_barbershop_denver</a>
+      <a href="mailto:hello@bringyoursingles.com">hello@bringyoursingles.com</a>
+    </div>
+    <div class="copy">© 2026 BRING YOUR SINGLES · DENVER, CO · DATING IN PERSON</div>
+  </div>
+</footer>
+
+<script>
+  // Countdown to Fri June 19, 2026 5:00 PM Mountain Time (UTC-6 during MDT)
+  (function(){
+    var event = new Date('2026-06-19T17:00:00-06:00').getTime();
+    function tick(){
+      var diff = event - Date.now();
+      var days = Math.max(0, Math.floor(diff / 86400000));
+      var el = document.getElementById('days');
+      if (el) el.textContent = days;
+    }
+    tick();
+    setInterval(tick, 60000);
+  })();
+</script>
+
+</body>
+</html>
