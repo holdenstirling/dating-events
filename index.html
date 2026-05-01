@@ -38,6 +38,11 @@
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
 
+<!-- Typography: Fraunces (editorial serif) for display, Inter (clean sans) for body -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800&family=Inter:wght@400;500;600;700;800&display=swap">
+
 <!-- Structured event data — helps Google show rich event results -->
 <script type="application/ld+json">
 {
@@ -95,7 +100,8 @@
     --cream: #F8F2E4;
     --cream-dim: #DDD6C8;
     --blue: #3D7BB8;
-    --sans: 'Helvetica Neue', 'Arial Black', Helvetica, Arial, sans-serif;
+    --serif: 'Fraunces', Georgia, 'Times New Roman', serif;
+    --sans: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: rgba(255,46,99,0.25); }
   html { scroll-behavior: smooth; color-scheme: dark; -webkit-text-size-adjust: 100%; }
@@ -186,13 +192,26 @@
     padding: 70px 0 80px;
     position: relative;
   }
+  .hero .vol {
+    color: var(--cream-dim);
+    font-weight: 600; letter-spacing: 5px;
+    font-size: 11px; text-transform: uppercase;
+    margin-bottom: 22px;
+  }
   .hero h1 {
-    font-family: var(--sans);
+    font-family: var(--serif);
     font-weight: 800;
     color: var(--pink);
     line-height: 1.0;
-    letter-spacing: -1.5px;
+    letter-spacing: -1px;
     margin: 0 0 18px;
+    font-variation-settings: "opsz" 144, "SOFT" 0;
+  }
+  .hero .hosted {
+    margin-top: 18px;
+    font-size: 12px; letter-spacing: 2px; color: var(--cream-dim);
+    font-weight: 500; text-transform: uppercase;
+    opacity: 0.75;
   }
   .hero h1 .l1,
   .hero h1 .l2,
@@ -237,9 +256,10 @@
   section { padding: 90px 0; border-top: 1px solid rgba(255,255,255,0.08); }
   section.alt { background: var(--black-soft); }
   section h2 {
-    font-family: var(--sans); font-weight: 800;
+    font-family: var(--serif); font-weight: 700;
     font-size: clamp(32px, 5vw, 52px); color: var(--cream);
     text-align: center; margin-bottom: 12px; letter-spacing: -0.5px;
+    line-height: 1.05;
   }
   .kicker { text-align: center; font-size: 11px; letter-spacing: 5px; font-weight: 700; color: var(--pink); margin-bottom: 8px; text-transform: uppercase; }
   .lead { text-align: center; max-width: 700px; margin: 12px auto 50px; font-size: 17px; color: var(--cream-dim); font-weight: 400; }
@@ -538,6 +558,7 @@
 <!-- Hero -->
 <section class="hero" style="border-top: none;">
   <div class="wrap">
+    <div class="vol">Vol. 01 · Summer 2026 · Denver</div>
     <h1>
       <span class="l1">COME MINGLE,</span>
       <span class="l2">BRING YOUR</span>
@@ -548,8 +569,19 @@
     <div class="stamp">FRI · JUN 19 · 5–9 PM</div>
     <div class="where">SCHOOLYARD BEER HALL · DENVER</div>
     <div class="meta">21+ · NO COVER · 100 SPOTS</div>
+    <div class="hosted">Hosted by Holden · with Schoolyard Beer Hall + Fresh Barbershop Denver</div>
     <br>
     <a class="rsvp" href="#rsvp">Save my spot →</a>
+  </div>
+</section>
+
+<!-- Why Denver / Why now -->
+<section id="why-denver">
+  <div class="wrap">
+    <div class="kicker">— Why now —</div>
+    <h2>Half this city moved here<br>in the last five years.</h2>
+    <p class="lead">Denver doubled in size in a blink. Half this room is the friend you haven't met yet — they moved here looking for the kind of Friday they couldn't find back home. The other half is your roommate's coworker's gym friend. Same people, different chapters.</p>
+    <p class="lead">First mingle of summer, before everyone disappears to the mountains. Schoolyard's where Denver's been having the right kind of Friday for years. We just built a room around it.</p>
   </div>
 </section>
 
@@ -707,7 +739,11 @@
       </details>
       <details>
         <summary>Where exactly is Schoolyard?</summary>
-        <p>Schoolyard Beer Hall, Denver. Confirm the exact address with the venue's website. We'll add a Google Maps link in the RSVP confirmation email.</p>
+        <p>Schoolyard Beer Hall, Denver. Full address and a Google Maps pin go out in the RSVP confirmation email. If you've ever ended up there on a Friday, you already know the room.</p>
+      </details>
+      <details>
+        <summary>How do I get there?</summary>
+        <p>Lyft from most central Denver neighborhoods runs about ten to fifteen minutes — usually under twenty bucks if you split it. Street parking around the venue is free but fills up fast on Fridays; plan for a five-minute walk if you're driving. We'll send turn-by-turn details in the confirmation email.</p>
       </details>
     </div>
   </div>
