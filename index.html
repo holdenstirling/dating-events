@@ -296,6 +296,53 @@
   .band h4 { font-size: 13px; letter-spacing: 2px; font-weight: 800; text-transform: uppercase; }
   .band p { font-size: 13px; color: #4a4a4a; margin-top: 6px; }
 
+  /* Optional pins — orientation signaling layer on top of wristbands */
+  .pins {
+    margin-top: 56px;
+    padding-top: 48px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    text-align: center;
+  }
+  .pins .micro {
+    font-size: 11px; letter-spacing: 4px; color: var(--pink);
+    text-transform: uppercase; font-weight: 700;
+  }
+  .pins h3 {
+    font-family: var(--serif); font-weight: 700;
+    font-size: clamp(22px, 3vw, 30px); color: var(--cream);
+    margin: 8px 0 12px; letter-spacing: -0.3px;
+  }
+  .pins-lead {
+    max-width: 640px;
+    margin: 0 auto 32px;
+    font-size: 16px;
+    color: var(--cream-dim);
+    line-height: 1.6;
+  }
+  .pin-grid {
+    display: flex; justify-content: center;
+    gap: 14px; flex-wrap: wrap;
+    max-width: 720px; margin: 0 auto;
+  }
+  .pin {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: var(--cream); color: var(--black);
+    padding: 12px 20px;
+    border-radius: 999px;
+    font-size: 12px; font-weight: 700; letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+  .pin .dot {
+    width: 14px; height: 14px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .pin .dot-pink { background: #E8669A; }
+  .pin .dot-blue { background: #4A8FBF; }
+  .pin .dot-rainbow {
+    background: linear-gradient(90deg, #E8669A 0%, #FFD400 50%, #4A8FBF 100%);
+  }
+
   /* Schedule */
   .timeline { max-width: 740px; margin: 0 auto; }
   .timeline .row {
@@ -626,22 +673,34 @@
       <div class="band">
         <div class="pill" style="background:#08F26E"></div>
         <h4>Single</h4>
-        <p>Open to meeting new people.</p>
+        <p>Open to meeting new people. Any gender — that's what the pins are for.</p>
       </div>
       <div class="band">
         <div class="pill" style="background:#FF2E63"></div>
         <h4>Taken</h4>
-        <p>Here for the vibe. Don't @ me.</p>
+        <p>Here for the vibe. Not in the dating market tonight.</p>
       </div>
       <div class="band">
         <div class="pill" style="background:#FFD400"></div>
-        <h4>Open / Curious</h4>
-        <p>Open to a conversation. We'll see.</p>
+        <h4>Curious</h4>
+        <p>Open to a conversation. Where it goes is wherever it goes.</p>
       </div>
       <div class="band">
         <div class="pill" style="background:#3D7BB8"></div>
         <h4>Ally</h4>
-        <p>Came with a friend. Here for it.</p>
+        <p>Here in support — matchmaker, wingman, LGBTQ+ ally, or just along for the night. Off the dating market.</p>
+      </div>
+    </div>
+
+    <!-- Optional pin layer for orientation signaling -->
+    <div class="pins">
+      <div class="micro">— Optional pins —</div>
+      <h3>The wristband says how. The pin says who.</h3>
+      <p class="pins-lead">Anyone with a Single or Curious wristband can grab a pin at the door if they want to signal who they're open to meeting. Optional, removable, no labels you don't pick up yourself. All genders, all orientations welcome — the pins just save you a few awkward sentences.</p>
+      <div class="pin-grid">
+        <div class="pin"><span class="dot dot-pink"></span><span>Open to women</span></div>
+        <div class="pin"><span class="dot dot-blue"></span><span>Open to men</span></div>
+        <div class="pin"><span class="dot dot-rainbow"></span><span>Open to all</span></div>
       </div>
     </div>
   </div>
@@ -711,7 +770,11 @@
       </details>
       <details>
         <summary>I'm in a couple. Can I come?</summary>
-        <p>Yes — and you should. The whole concept is "friends of friends." Couples are the best matchmakers. Bring the single friend you've been meaning to set up for the last three years. Show up wearing red wristbands so single people know.</p>
+        <p>Yes — and you should. The whole concept is "friends of friends." Couples and partners are the best matchmakers. Bring the single friend you've been meaning to set up for the last three years. Show up wearing red wristbands so single people know.</p>
+      </details>
+      <details>
+        <summary>Is this LGBTQ+ inclusive?</summary>
+        <p>Fully. Every gender and orientation is welcome — the wristband legend is intentionally orientation-neutral so nobody has to label anything they don't want to label. The optional pins at the door are how people signal who they're open to meeting (open to women, open to men, open to all) — pick one up, skip them all, whatever feels right. The Ally band exists for anyone here in support, including LGBTQ+ allies who want to be part of the night without being part of the dating market.</p>
       </details>
       <details>
         <summary>Why "Dating in person"?</summary>
