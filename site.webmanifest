@@ -1,0 +1,13 @@
+{
+  "name": "Come Mingle, Bring Your Singles",
+  "short_name": "BYS",
+  "description": "Friends-of-friends mingle night at Schoolyard Beer Hall in Denver. Friday June 19, 5–9 PM. Wristbands at the door. Fresh Barbershop on-site. Dating in person.",
+  "start_url": "/",
+  "display": "browser",
+  "theme_color": "#0A0A0A",
+  "background_color": "#0A0A0A",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "/apple-touch-icon.svg", "sizes": "180x180", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

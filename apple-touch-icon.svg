@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" role="img" aria-label="Bring Your Singles">
+  <title>Bring Your Singles</title>
+  <rect width="180" height="180" fill="#0A0A0A"/>
+  <rect x="20" y="34"  width="140" height="18" rx="4" fill="#08F26E"/>
+  <rect x="20" y="62"  width="140" height="18" rx="4" fill="#FF2E63"/>
+  <rect x="20" y="90"  width="140" height="18" rx="4" fill="#FFD400"/>
+  <rect x="20" y="118" width="140" height="18" rx="4" fill="#3D7BB8"/>
+  <text x="90" y="160" text-anchor="middle"
+        font-family="'Helvetica Neue', Arial Black, Helvetica, sans-serif"
+        font-weight="900" font-size="14" letter-spacing="2" fill="#F8F2E4">BYS · DENVER</text>
+</svg>

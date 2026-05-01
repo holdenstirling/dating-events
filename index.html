@@ -2,13 +2,88 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0A0A0A">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="format-detection" content="telephone=no">
 <title>Come Mingle, Bring Your Singles · Friday June 19 · Schoolyard · Denver</title>
 <meta name="description" content="Come Mingle, Bring Your Singles — a friends-of-friends mingle night at Schoolyard Beer Hall in Denver. Friday June 19, 5–9 PM. Wristbands at the door. Fresh Barbershop on-site. Dating in person.">
 <meta property="og:title" content="Come Mingle, Bring Your Singles · Fri Jun 19 · Schoolyard Denver">
 <meta property="og:description" content="Friends of friends. Wristbands at the door. Fresh Barbershop on-site. 100 spots, 21+, no cover. Dating in person.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://bringyoursingles.com/">
+<meta property="og:image" content="https://bringyoursingles.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Come Mingle, Bring Your Singles — Friday June 19, 5–9 PM, Schoolyard Beer Hall, Denver. Dating in person.">
+<meta property="og:site_name" content="Bring Your Singles">
+<meta property="og:locale" content="en_US">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Come Mingle, Bring Your Singles · Fri Jun 19 · Schoolyard Denver">
+<meta name="twitter:description" content="Friends of friends. Wristbands at the door. Fresh Barbershop on-site. 100 spots, 21+, no cover. Dating in person.">
+<meta name="twitter:image" content="https://bringyoursingles.com/og.png">
+<meta name="twitter:image:alt" content="Come Mingle, Bring Your Singles — Friday June 19, 5–9 PM, Schoolyard Beer Hall, Denver.">
+
+<!-- NOTE: When deploying to a non-bringyoursingles.com domain, update canonical, og:url, og:image, twitter:image, and the JSON-LD URLs below to match. -->
+<link rel="canonical" href="https://bringyoursingles.com/">
+
+<!-- Favicon set -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/apple-touch-icon.svg">
+<link rel="manifest" href="/site.webmanifest">
+
+<!-- Faster QR script load: warm up the jsDelivr CDN connection -->
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+
+<!-- Structured event data — helps Google show rich event results -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Come Mingle, Bring Your Singles",
+  "description": "A friends-of-friends mingle night at Schoolyard Beer Hall in Denver. Wristbands at the door, Fresh Barbershop on-site, raffles all night. 21+, no cover, 100 spots.",
+  "startDate": "2026-06-19T17:00:00-06:00",
+  "endDate": "2026-06-19T21:00:00-06:00",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "location": {
+    "@type": "Place",
+    "name": "Schoolyard Beer Hall",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Denver",
+      "addressRegion": "CO",
+      "addressCountry": "US"
+    }
+  },
+  "organizer": {
+    "@type": "Organization",
+    "name": "Bring Your Singles",
+    "url": "https://bringyoursingles.com",
+    "email": "hello@bringyoursingles.com"
+  },
+  "performer": [
+    { "@type": "Organization", "name": "Schoolyard Beer Hall" },
+    { "@type": "Organization", "name": "Fresh Barbershop Denver" }
+  ],
+  "image": ["https://bringyoursingles.com/og.png"],
+  "url": "https://bringyoursingles.com/",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "url": "https://partiful.com/e/qSlcrRZX3YZ93JsiHmwg?c=oiTxD0S0",
+    "validFrom": "2026-04-30"
+  },
+  "isAccessibleForFree": true,
+  "typicalAgeRange": "21+",
+  "inLanguage": "en"
+}
+</script>
 <style>
   :root {
     --black: #0A0A0A;
@@ -22,8 +97,12 @@
     --blue: #3D7BB8;
     --sans: 'Helvetica Neue', 'Arial Black', Helvetica, Arial, sans-serif;
   }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
+  * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: rgba(255,46,99,0.25); }
+  html { scroll-behavior: smooth; color-scheme: dark; -webkit-text-size-adjust: 100%; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { transition: none !important; animation: none !important; }
+  }
   body {
     font-family: var(--sans);
     background: var(--black);
@@ -32,22 +111,54 @@
     background-image: radial-gradient(circle, rgba(255,46,99,0.18) 0.6px, transparent 0.8px);
     background-size: 22px 22px;
     overflow-x: hidden;
+    overflow-wrap: break-word;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
   .wrap { max-width: 1180px; margin: 0 auto; padding: 0 28px; }
   a { color: var(--pink); text-decoration: none; }
   a:hover { text-decoration: underline; }
+  /* Default min tap target */
+  a, button, summary { touch-action: manipulation; }
+
+  /* Skip link — keyboard users can jump past the topbar/nav */
+  .skip-link {
+    position: absolute; top: -100px; left: 16px;
+    background: var(--green); color: var(--black);
+    padding: 12px 18px; font-weight: 900; letter-spacing: 2px;
+    font-size: 13px; text-transform: uppercase; border-radius: 4px;
+    z-index: 9999;
+    transition: top 0.15s;
+  }
+  .skip-link:focus {
+    top: 12px; text-decoration: none;
+    outline: 3px solid var(--pink); outline-offset: 2px;
+  }
+
+  /* Brand-colored keyboard focus rings (mouse clicks unaffected) */
+  :focus { outline: none; }
+  :focus-visible {
+    outline: 3px solid var(--green);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+  .topbar a:focus-visible,
+  .rsvp-block a:focus-visible {
+    outline-color: var(--black);
+  }
 
   /* Top wristband bar */
   .topbar {
     background: var(--black);
     color: var(--cream);
-    padding: 12px 24px;
+    padding: max(12px, env(safe-area-inset-top)) 24px 12px;
     text-align: center;
     font-size: 13px;
     letter-spacing: 5px;
     font-weight: 900;
     text-transform: uppercase;
     border-bottom: 2px solid var(--pink);
+    line-height: 1.4;
   }
   .topbar .stripes { display: inline-flex; gap: 5px; margin-right: 16px; vertical-align: middle; }
   .topbar .stripes span { width: 22px; height: 9px; }
@@ -240,33 +351,186 @@
   .rsvp-block .btn:hover { background: var(--green); color: var(--black); text-decoration: none; }
   .rsvp-block .small { display: block; margin-top: 22px; font-size: 13px; letter-spacing: 4px; font-weight: 900; }
 
+  /* QR card — sits inside the RSVP block */
+  .qr-wrap { display: flex; justify-content: center; margin: 32px 0 18px; }
+  .qr-card {
+    background: var(--cream);
+    color: var(--black);
+    padding: 22px;
+    border: 4px solid var(--black);
+    box-shadow: 8px 8px 0 var(--black);
+    text-align: center;
+    max-width: 320px;
+  }
+  .qr-render {
+    width: 240px; height: 240px;
+    margin: 0 auto;
+    display: flex; align-items: center; justify-content: center;
+    background: var(--cream);
+  }
+  .qr-render svg { width: 100%; height: 100%; display: block; }
+  .qr-render canvas { width: 100% !important; height: 100% !important; display: block; }
+  .qr-fallback {
+    display: flex; align-items: center; justify-content: center;
+    width: 100%; height: 100%;
+    color: var(--black);
+    font-weight: 900; letter-spacing: 2px; font-size: 14px;
+    text-transform: uppercase;
+    border: 2px dashed var(--black);
+    padding: 12px;
+    text-align: center;
+    line-height: 1.3;
+  }
+  .qr-fallback:hover { background: var(--black); color: var(--green); text-decoration: none; }
+  .qr-caption {
+    margin-top: 16px;
+    font-weight: 900;
+    letter-spacing: 4px;
+    font-size: 12px;
+    color: var(--black);
+    text-transform: uppercase;
+  }
+
   /* Footer */
-  footer { background: var(--black); padding: 56px 0 44px; text-align: center; border-top: 2px solid var(--pink); }
+  footer { background: var(--black); padding: 56px 0 calc(44px + env(safe-area-inset-bottom)); text-align: center; border-top: 2px solid var(--pink); }
   footer .cobrand {
     font-weight: 900; letter-spacing: 4px;
     font-size: 18px; margin-bottom: 14px; color: var(--cream);
+    line-height: 1.3;
   }
   footer .links { font-size: 13px; letter-spacing: 4px; font-weight: 700; }
-  footer .links a { margin: 0 14px; color: var(--green); }
+  footer .links a { margin: 0 14px; color: var(--green); display: inline-block; padding: 8px 4px; }
   footer .copy { margin-top: 24px; font-size: 12px; opacity: 0.5; color: var(--cream); letter-spacing: 2px; }
 
-  /* Mobile */
+  /* Tablet & mobile */
   @media (max-width: 760px) {
+    .wrap { padding: 0 18px; }
+    body { background-size: 16px 16px; }
+
+    /* Topbar — let the long line wrap cleanly */
+    .topbar { font-size: 11px; letter-spacing: 2px; padding: 10px 14px; }
+    .topbar .stripes { margin-right: 10px; gap: 4px; }
+    .topbar .stripes span { width: 16px; height: 7px; }
+
+    /* Nav */
+    nav { padding: 16px 0; gap: 12px; }
     nav ul { display: none; }
-    nav .cta { padding: 10px 16px; font-size: 11px; letter-spacing: 2px; }
+    nav .cta {
+      padding: 12px 18px; font-size: 11px; letter-spacing: 2px;
+      min-height: 44px; display: inline-flex; align-items: center;
+    }
+    .brand-mark { font-size: 14px; letter-spacing: -0.3px; max-width: 60vw; line-height: 1.15; }
+    .brand-mark span { font-size: 8px; letter-spacing: 2px; margin-top: 3px; }
+
+    /* Hero */
     .hero { padding: 40px 0 60px; }
-    .hero .stickers { gap: 20px; }
-    .sticker { padding: 8px 18px; font-size: 16px; }
-    .hero .tagline { letter-spacing: 4px; }
-    .grid4 { grid-template-columns: 1fr 1fr; gap: 12px; }
-    .bands { grid-template-columns: 1fr 1fr; }
+    .hero .stickers { gap: 16px; max-width: 100%; margin-bottom: 22px; }
+    .sticker { padding: 8px 18px; font-size: 16px; letter-spacing: 1px; }
+    .hero h1 { letter-spacing: -2px; margin: 12px 0; }
+    .hero .tagline { letter-spacing: 4px; margin-top: 12px; }
+    .hero .pitch { margin-top: 20px; padding: 0 4px; }
+    .hero .stamp {
+      padding: 14px 22px; letter-spacing: 2px; margin-top: 28px;
+      font-size: clamp(18px, 5vw, 26px);
+    }
+    .hero .where { letter-spacing: 3px; font-size: 13px; }
+    .hero .meta { letter-spacing: 3px; font-size: 11px; }
+    .hero .rsvp {
+      padding: 16px 32px; letter-spacing: 2px; font-size: 14px;
+      margin-top: 24px; min-height: 48px;
+    }
+
+    /* Sections */
     section { padding: 60px 0; }
-    .timeline .row { grid-template-columns: 80px 1fr; gap: 14px; }
+    .kicker { letter-spacing: 4px; font-size: 11px; }
+    .lead { font-size: 16px; margin-bottom: 36px; }
+
+    /* Hooks grid */
+    .grid4 { grid-template-columns: 1fr 1fr; gap: 12px; }
+    .card { padding: 22px 14px; }
+    .card .num { width: 38px; height: 38px; line-height: 32px; font-size: 17px; }
+    .card h3 { letter-spacing: 2px; }
+
+    /* Wristbands */
+    .bands { grid-template-columns: 1fr 1fr; gap: 12px; }
+    .band { padding: 18px 12px; }
+    .band h4 { letter-spacing: 2px; }
+
+    /* Schedule */
+    .timeline .row { grid-template-columns: 72px 1fr; gap: 14px; padding: 18px 0; }
     .timeline .time { font-size: 22px; }
+    .timeline h4 { letter-spacing: 2px; }
+
+    /* FAQ */
+    summary { font-size: 17px; padding-right: 32px; }
+    details p { font-size: 15px; }
+
+    /* RSVP block */
+    .rsvp-block { padding: 70px 18px; }
+    .rsvp-block .btn {
+      padding: 18px 32px; letter-spacing: 2px; font-size: 16px;
+      min-height: 56px; display: inline-flex; align-items: center; justify-content: center;
+    }
+    .rsvp-block .small { letter-spacing: 2px; font-size: 12px; line-height: 1.6; }
+
+    /* Footer */
+    footer { padding: 44px 0 calc(36px + env(safe-area-inset-bottom)); }
+    footer .cobrand { font-size: 14px; letter-spacing: 2px; }
+    footer .links {
+      display: flex; flex-direction: column; gap: 4px;
+      font-size: 12px; letter-spacing: 2px;
+    }
+    footer .links a { margin: 0; padding: 10px 4px; }
+  }
+
+  /* Small phones — iPhone SE / mini */
+  @media (max-width: 480px) {
+    .wrap { padding: 0 16px; }
+
+    /* Hero headline floors that actually fit narrow screens */
+    .hero h1 { letter-spacing: -1.5px; }
+    .hero h1 .l1 { font-size: clamp(34px, 11vw, 64px); }
+    .hero h1 .l2 { font-size: clamp(40px, 13vw, 72px); }
+    .hero h1 .l3 {
+      font-size: clamp(54px, 19vw, 100px);
+      -webkit-text-stroke: 2px var(--black);
+    }
+    .hero .tagline { font-size: 14px; letter-spacing: 3px; }
+    .hero .pitch { font-size: 15px; }
+
+    .sticker { padding: 7px 14px; font-size: 14px; transform: rotate(-4deg); }
+    .sticker.cream { transform: rotate(5deg); }
+
+    section h2 { font-size: clamp(30px, 8vw, 44px); -webkit-text-stroke: 1px var(--black); }
+    .kicker { letter-spacing: 3px; }
+
+    .grid4 { grid-template-columns: 1fr; }
+    .bands { grid-template-columns: 1fr 1fr; }
+
+    .timeline .row { grid-template-columns: 64px 1fr; gap: 12px; }
+    .timeline .time { font-size: 20px; }
+
+    summary { font-size: 16px; }
+
+    .rsvp-block { padding: 56px 14px; }
+    .rsvp-block .btn { padding: 16px 24px; font-size: 14px; width: 100%; max-width: 320px; }
+    .qr-card { padding: 16px; box-shadow: 4px 4px 0 var(--black); max-width: 280px; }
+    .qr-render { width: 200px; height: 200px; }
+    .qr-caption { font-size: 11px; letter-spacing: 3px; }
+  }
+
+  /* Tiny screens — galaxy fold front, etc. */
+  @media (max-width: 360px) {
+    .wrap { padding: 0 12px; }
+    .hero .stickers { gap: 8px; }
+    .brand-mark { font-size: 12px; }
+    .hero h1 .l3 { font-size: clamp(48px, 18vw, 80px); }
   }
 </style>
 </head>
 <body>
+
+<a class="skip-link" href="#what">Skip to content</a>
 
 <!-- Top bar with wristband stripes -->
 <div class="topbar">
@@ -296,12 +560,14 @@
   </nav>
 </header>
 
+<main id="main">
+
 <!-- Hero -->
 <section class="hero" style="border-top: none;">
   <div class="wrap">
     <div class="stickers">
-      <div class="sticker">No apps.</div>
-      <div class="sticker cream">Show up.</div>
+      <div class="sticker">Friends.</div>
+      <div class="sticker cream">Of friends.</div>
     </div>
     <h1>
       <span class="l1">COME MINGLE,</span>
@@ -309,7 +575,7 @@
       <span class="l3">SINGLES.</span>
     </h1>
     <div class="tagline">— Dating in person —</div>
-    <p class="pitch">A Friday-night mingle for friends of friends. <em>No swiping, no bios, no "wyd."</em> Just wristbands at the door, a beer hall, and 100 people who are also done with their phone.</p>
+    <p class="pitch">A Friday-night mingle for friends of friends. <em>Bring the single you've been trying to set up for years.</em> 100 people. Wristbands at the door. Just the actual humans your group chat keeps mentioning.</p>
     <div class="stamp">FRI · JUN 19 · 5–9 PM</div>
     <div class="where">SCHOOLYARD BEER HALL · DENVER</div>
     <div class="meta">21+ · NO COVER · 100 SPOTS</div>
@@ -323,8 +589,8 @@
 <section id="what" class="alt">
   <div class="wrap">
     <div class="kicker">— What's waiting for you —</div>
-    <h2>Tired of the apps?<br>So are we.</h2>
-    <p class="lead">No swiping. No bios. No "wyd." Just real faces, real drinks, and a beer hall full of people who are also done with their phone. Couples welcome — bring the singles you've been trying to set up for years.</p>
+    <h2>Your friend's hot<br>single friend.</h2>
+    <p class="lead">Couples are the best matchmakers. We made the room. You bring the singles. 100 people, all introduced by someone — that's the whole concept.</p>
     <div class="grid4">
       <div class="card">
         <div class="num">1</div>
@@ -449,7 +715,7 @@
       </details>
       <details>
         <summary>Why "Dating in person"?</summary>
-        <p>Because the apps got us nowhere. Every Friday night we've been swiping in the same five-mile radius, ignoring the actual humans inside it. This night is just an excuse to put your phone down and look around.</p>
+        <p>Because the best couples we know all started with a friend introducing them at a Friday-night thing. This is a bigger version of that — your group chat scaled up to a beer hall.</p>
       </details>
       <details>
         <summary>What's the catch?</summary>
@@ -485,17 +751,27 @@
     <div class="kicker">— RSVP —</div>
     <h2>100 spots. Save yours.</h2>
     <p class="lead">Free. Friends of friends only. Locks in your wristband for the door.</p>
-    <a class="btn" href="#" onclick="alert('Replace this link with your Partiful or Eventbrite URL before publishing.'); return false;">RSVP on Partiful →</a>
+    <div class="qr-wrap">
+      <div class="qr-card">
+        <div class="qr-render" id="qr-svg" aria-label="QR code linking to the Partiful RSVP page">
+          <a class="qr-fallback" href="https://partiful.com/e/qSlcrRZX3YZ93JsiHmwg?c=oiTxD0S0" target="_blank" rel="noopener">Tap to open RSVP →</a>
+        </div>
+        <div class="qr-caption">Scan to RSVP</div>
+      </div>
+    </div>
+    <a class="btn" href="https://partiful.com/e/qSlcrRZX3YZ93JsiHmwg?c=oiTxD0S0" target="_blank" rel="noopener">RSVP on Partiful →</a>
     <span class="small">Friday June 19 · 5–9 PM · Schoolyard Beer Hall · Denver · 21+ · No cover</span>
   </div>
 </section>
+
+</main>
 
 <footer>
   <div class="wrap">
     <div class="cobrand">SCHOOLYARD ✕ FRESH BARBERSHOP DENVER</div>
     <div class="links">
-      <a href="https://instagram.com/bringyoursingles" target="_blank">@bringyoursingles</a>
-      <a href="https://instagram.com/fresh_barbershop_denver" target="_blank">@fresh_barbershop_denver</a>
+      <a href="https://instagram.com/bringyoursingles" target="_blank" rel="noopener">@bringyoursingles</a>
+      <a href="https://instagram.com/fresh_barbershop_denver" target="_blank" rel="noopener">@fresh_barbershop_denver</a>
       <a href="mailto:hello@bringyoursingles.com">hello@bringyoursingles.com</a>
     </div>
     <div class="copy">© 2026 BRING YOUR SINGLES · DENVER, CO · DATING IN PERSON</div>
@@ -515,6 +791,26 @@
     tick();
     setInterval(tick, 60000);
   })();
+</script>
+
+<!-- QR code: loads a tiny QR library from jsdelivr and renders an inline SVG pointing at the Partiful RSVP. -->
+<!-- If the library fails to load, the .qr-fallback link inside .qr-render stays visible. -->
+<script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js" defer></script>
+<script>
+  window.addEventListener('load', function () {
+    var target = document.getElementById('qr-svg');
+    if (!target || typeof QRCode === 'undefined') return;
+    var url = 'https://partiful.com/e/qSlcrRZX3YZ93JsiHmwg?c=oiTxD0S0';
+    QRCode.toString(url, {
+      type: 'svg',
+      errorCorrectionLevel: 'M',
+      margin: 1,
+      color: { dark: '#0A0A0A', light: '#F8F2E4' }
+    }, function (err, svg) {
+      if (err || !svg) return;        // leave fallback link in place on failure
+      target.innerHTML = svg;
+    });
+  });
 </script>
 
 </body>
