@@ -88,10 +88,10 @@
   :root {
     --black: #0A0A0A;
     --black-soft: #131313;
-    --pink: #FF2E63;
-    --pink-deep: #E12855;
-    --green: #08F26E;
-    --yellow: #FFD400;
+    --pink: #D94364;        /* deep coral, no longer screaming neon */
+    --pink-deep: #B53353;
+    --green: #5A8B5C;       /* muted moss, used sparingly */
+    --yellow: #E8C547;      /* dimmed gold for wristband only */
     --cream: #F8F2E4;
     --cream-dim: #DDD6C8;
     --blue: #3D7BB8;
@@ -107,9 +107,7 @@
     font-family: var(--sans);
     background: var(--black);
     color: var(--cream);
-    line-height: 1.55;
-    background-image: radial-gradient(circle, rgba(255,46,99,0.18) 0.6px, transparent 0.8px);
-    background-size: 22px 22px;
+    line-height: 1.6;
     overflow-x: hidden;
     overflow-wrap: break-word;
     -webkit-font-smoothing: antialiased;
@@ -172,15 +170,15 @@
     font-weight: 900; line-height: 1; color: var(--pink);
     font-size: 22px; letter-spacing: -0.5px;
   }
-  .brand-mark span { display: block; font-size: 10px; letter-spacing: 4px; color: var(--green); margin-top: 4px; font-weight: 900; }
+  .brand-mark span { display: block; font-size: 10px; letter-spacing: 4px; color: var(--cream-dim); margin-top: 4px; font-weight: 700; }
   nav ul { list-style: none; display: flex; gap: 28px; align-items: center; }
   nav ul a { color: var(--cream); font-weight: 900; font-size: 13px; letter-spacing: 3px; text-transform: uppercase; }
   nav .cta {
-    background: var(--pink); color: var(--black); padding: 12px 22px;
-    border-radius: 999px; font-weight: 900; letter-spacing: 3px; font-size: 12px;
+    background: var(--pink); color: var(--cream); padding: 12px 22px;
+    border-radius: 4px; font-weight: 800; letter-spacing: 2px; font-size: 12px;
     text-transform: uppercase;
   }
-  nav .cta:hover { background: var(--green); text-decoration: none; }
+  nav .cta:hover { background: var(--pink-deep); text-decoration: none; }
 
   /* Hero */
   .hero {
@@ -188,33 +186,22 @@
     padding: 70px 0 80px;
     position: relative;
   }
-  .hero .stickers { display: flex; justify-content: space-between; max-width: 800px; margin: 0 auto 30px; }
-  .sticker {
-    background: var(--pink); color: var(--black);
-    padding: 12px 28px; font-weight: 900; font-size: 22px;
-    letter-spacing: 2px; text-transform: uppercase;
-    transform: rotate(-6deg); display: inline-block;
-  }
-  .sticker.cream { background: var(--cream); transform: rotate(7deg); }
-
   .hero h1 {
     font-family: var(--sans);
-    font-weight: 900;
+    font-weight: 800;
     color: var(--pink);
-    line-height: 0.92;
-    letter-spacing: -3px;
-    margin: 16px 0;
+    line-height: 1.0;
+    letter-spacing: -1.5px;
+    margin: 0 0 18px;
   }
-  .hero h1 .l1 { display: block; font-size: clamp(54px, 9vw, 120px); }
-  .hero h1 .l2 { display: block; font-size: clamp(64px, 10vw, 140px); }
-  .hero h1 .l3 {
-    display: block; font-size: clamp(96px, 16vw, 220px);
-    -webkit-text-stroke: 3px var(--black);
-  }
+  .hero h1 .l1,
+  .hero h1 .l2,
+  .hero h1 .l3 { display: block; font-size: clamp(48px, 9vw, 96px); }
   .hero .tagline {
-    color: var(--green); font-weight: 900;
-    font-size: clamp(18px, 2.6vw, 28px); letter-spacing: 8px;
-    margin-top: 8px; text-transform: uppercase;
+    color: var(--cream); font-weight: 700;
+    font-size: clamp(14px, 2vw, 18px); letter-spacing: 5px;
+    margin-top: 4px; text-transform: uppercase;
+    opacity: 0.85;
   }
   .hero .pitch {
     margin-top: 24px; font-size: clamp(16px, 2vw, 22px);
@@ -224,42 +211,38 @@
   .hero .pitch em { font-style: italic; color: var(--cream-dim); }
 
   .hero .stamp {
-    display: inline-block; background: var(--pink); color: var(--black);
-    padding: 16px 40px; font-weight: 900; letter-spacing: 3px;
-    font-size: clamp(20px, 3vw, 32px); margin-top: 36px;
+    display: inline-block; background: var(--pink); color: var(--cream);
+    padding: 14px 32px; font-weight: 800; letter-spacing: 3px;
+    font-size: clamp(18px, 2.6vw, 24px); margin-top: 32px;
+    border-radius: 4px;
   }
   .hero .where {
     display: block; margin-top: 14px;
-    font-size: 16px; letter-spacing: 5px; font-weight: 700; color: var(--cream);
+    font-size: 15px; letter-spacing: 4px; font-weight: 700; color: var(--cream);
   }
   .hero .meta {
     display: block; margin-top: 6px;
-    font-size: 13px; letter-spacing: 5px; font-weight: 900; color: var(--green);
+    font-size: 12px; letter-spacing: 4px; font-weight: 700; color: var(--cream-dim);
   }
   .hero .rsvp {
     display: inline-block; margin-top: 28px;
-    background: var(--green); color: var(--black);
-    padding: 18px 50px; font-weight: 900; letter-spacing: 4px;
-    font-size: 16px; text-transform: uppercase; border-radius: 999px;
-    transition: all 0.15s;
+    background: var(--cream); color: var(--black);
+    padding: 16px 36px; font-weight: 800; letter-spacing: 3px;
+    font-size: 14px; text-transform: uppercase; border-radius: 4px;
+    transition: background-color 0.15s;
   }
-  .hero .rsvp:hover { background: var(--pink); color: var(--black); text-decoration: none; }
-  .hero .countdown {
-    margin-top: 18px; font-size: 13px; letter-spacing: 4px; color: var(--cream-dim); font-weight: 700;
-  }
-  .hero .countdown #days { color: var(--pink); font-size: 18px; font-weight: 900; }
+  .hero .rsvp:hover { background: var(--pink); color: var(--cream); text-decoration: none; }
 
   /* Sections */
-  section { padding: 90px 0; border-top: 2px solid var(--pink); }
+  section { padding: 90px 0; border-top: 1px solid rgba(255,255,255,0.08); }
   section.alt { background: var(--black-soft); }
   section h2 {
-    font-family: var(--sans); font-weight: 900;
-    font-size: clamp(36px, 6vw, 64px); color: var(--pink);
-    text-align: center; margin-bottom: 8px; letter-spacing: -1px;
-    -webkit-text-stroke: 1.5px var(--black);
+    font-family: var(--sans); font-weight: 800;
+    font-size: clamp(32px, 5vw, 52px); color: var(--cream);
+    text-align: center; margin-bottom: 12px; letter-spacing: -0.5px;
   }
-  .kicker { text-align: center; font-size: 13px; letter-spacing: 8px; font-weight: 900; color: var(--green); margin-bottom: 8px; text-transform: uppercase; }
-  .lead { text-align: center; max-width: 720px; margin: 12px auto 50px; font-size: 18px; color: var(--cream); font-weight: 500; }
+  .kicker { text-align: center; font-size: 11px; letter-spacing: 5px; font-weight: 700; color: var(--pink); margin-bottom: 8px; text-transform: uppercase; }
+  .lead { text-align: center; max-width: 700px; margin: 12px auto 50px; font-size: 17px; color: var(--cream-dim); font-weight: 400; }
 
   /* Hooks grid */
   .grid4 {
@@ -267,89 +250,85 @@
   }
   .card {
     background: var(--cream); color: var(--black);
-    padding: 28px 18px; text-align: center;
-    border: 3px solid var(--cream); transition: all 0.2s;
+    padding: 28px 20px; text-align: center;
+    border-radius: 4px;
   }
-  .card.green { background: var(--green); }
-  .card.yellow { background: var(--yellow); }
-  .card.blue { background: var(--blue); color: var(--cream); }
   .card .num {
-    display: inline-block; width: 44px; height: 44px; line-height: 38px;
-    border: 3px solid var(--black); border-radius: 50%;
-    font-weight: 900; font-size: 20px; margin-bottom: 14px;
+    display: inline-block; width: 36px; height: 36px; line-height: 32px;
+    border: 2px solid var(--pink); border-radius: 50%;
+    color: var(--pink);
+    font-weight: 800; font-size: 16px; margin-bottom: 16px;
   }
-  .card.blue .num { border-color: var(--cream); }
-  .card h3 { font-weight: 900; letter-spacing: 3px; font-size: 14px; text-transform: uppercase; margin-bottom: 10px; }
-  .card p { font-size: 14px; line-height: 1.5; }
+  .card h3 { font-weight: 800; letter-spacing: 2px; font-size: 13px; text-transform: uppercase; margin-bottom: 10px; }
+  .card p { font-size: 14px; line-height: 1.55; color: #2C2C2C; }
 
   /* Wristbands */
   .bands { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; max-width: 880px; margin: 0 auto; }
   .band {
-    text-align: center; padding: 24px 14px;
+    text-align: center; padding: 22px 14px;
     background: var(--cream); color: var(--black);
-    border: 3px solid var(--black);
+    border-radius: 4px;
   }
   .band .pill {
-    display: inline-block; width: 100%; max-width: 160px; height: 36px;
-    border-radius: 18px; margin-bottom: 16px;
-    border: 3px solid var(--black);
+    display: inline-block; width: 100%; max-width: 140px; height: 28px;
+    border-radius: 14px; margin-bottom: 16px;
   }
-  .band h4 { font-size: 14px; letter-spacing: 3px; font-weight: 900; text-transform: uppercase; }
-  .band p { font-size: 13px; color: #2C2C2C; margin-top: 6px; }
+  .band h4 { font-size: 13px; letter-spacing: 2px; font-weight: 800; text-transform: uppercase; }
+  .band p { font-size: 13px; color: #4a4a4a; margin-top: 6px; }
 
   /* Schedule */
   .timeline { max-width: 740px; margin: 0 auto; }
   .timeline .row {
     display: grid; grid-template-columns: 110px 1fr;
     gap: 24px; padding: 22px 0;
-    border-bottom: 1px dashed var(--pink);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
   }
   .timeline .row:last-child { border-bottom: none; }
-  .timeline .time { font-weight: 900; font-size: 28px; color: var(--green); letter-spacing: 1px; }
-  .timeline h4 { font-size: 14px; letter-spacing: 3px; font-weight: 900; color: var(--pink); text-transform: uppercase; margin-bottom: 4px; }
+  .timeline .time { font-weight: 800; font-size: 26px; color: var(--pink); letter-spacing: 0.5px; }
+  .timeline h4 { font-size: 13px; letter-spacing: 2px; font-weight: 800; color: var(--cream); text-transform: uppercase; margin-bottom: 4px; }
   .timeline p { font-size: 15px; color: var(--cream-dim); }
 
   /* FAQ */
   .faq { max-width: 760px; margin: 0 auto; }
   details {
-    border-bottom: 1px solid var(--pink);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
     padding: 20px 0;
   }
-  details[open] summary { color: var(--green); }
+  details[open] summary { color: var(--pink); }
   summary {
-    font-weight: 900; font-size: 20px;
+    font-weight: 700; font-size: 18px;
     cursor: pointer; list-style: none; position: relative;
-    padding-right: 36px; letter-spacing: -0.5px;
+    padding-right: 36px; letter-spacing: 0;
     color: var(--cream);
   }
   summary::-webkit-details-marker { display: none; }
   summary::after {
     content: '+'; position: absolute; right: 0; top: -2px;
-    font-size: 30px; color: var(--pink);
+    font-size: 28px; color: var(--cream-dim);
     transition: transform 0.15s;
   }
-  details[open] summary::after { content: '−'; color: var(--green); }
-  details p { margin-top: 12px; font-size: 16px; color: var(--cream-dim); line-height: 1.6; }
+  details[open] summary::after { content: '−'; color: var(--pink); }
+  details p { margin-top: 12px; font-size: 16px; color: var(--cream-dim); line-height: 1.65; }
 
   /* RSVP block */
   .rsvp-block {
     text-align: center;
     background: var(--pink);
-    color: var(--black);
-    padding: 100px 24px;
+    color: var(--cream);
+    padding: 96px 24px;
     border-top: none;
   }
-  .rsvp-block h2 { color: var(--black); -webkit-text-stroke: 0; }
-  .rsvp-block .lead { color: var(--black); }
-  .rsvp-block .kicker { color: var(--black); }
+  .rsvp-block h2 { color: var(--cream); }
+  .rsvp-block .lead { color: var(--cream); opacity: 0.95; }
+  .rsvp-block .kicker { color: var(--cream); opacity: 0.85; }
   .rsvp-block .btn {
-    display: inline-block; background: var(--black); color: var(--green);
-    padding: 24px 70px; font-weight: 900; letter-spacing: 4px;
-    font-size: 20px; text-transform: uppercase; margin-top: 14px;
-    border-radius: 999px;
+    display: inline-block; background: var(--black); color: var(--cream);
+    padding: 18px 44px; font-weight: 800; letter-spacing: 3px;
+    font-size: 15px; text-transform: uppercase; margin-top: 14px;
+    border-radius: 4px;
   }
-  .rsvp-block .btn:hover { background: var(--green); color: var(--black); text-decoration: none; }
-  .rsvp-block .small { display: block; margin-top: 22px; font-size: 13px; letter-spacing: 4px; font-weight: 900; }
+  .rsvp-block .btn:hover { background: var(--cream); color: var(--black); text-decoration: none; }
+  .rsvp-block .small { display: block; margin-top: 22px; font-size: 12px; letter-spacing: 3px; font-weight: 700; opacity: 0.9; }
 
   /* QR card — sits inside the RSVP block */
   .qr-wrap { display: flex; justify-content: center; margin: 32px 0 18px; }
@@ -381,26 +360,27 @@
     text-align: center;
     line-height: 1.3;
   }
-  .qr-fallback:hover { background: var(--black); color: var(--green); text-decoration: none; }
+  .qr-fallback:hover { background: var(--black); color: var(--cream); text-decoration: none; }
   .qr-caption {
     margin-top: 16px;
-    font-weight: 900;
-    letter-spacing: 4px;
+    font-weight: 800;
+    letter-spacing: 3px;
     font-size: 12px;
     color: var(--black);
     text-transform: uppercase;
   }
 
   /* Footer */
-  footer { background: var(--black); padding: 56px 0 calc(44px + env(safe-area-inset-bottom)); text-align: center; border-top: 2px solid var(--pink); }
+  footer { background: var(--black); padding: 48px 0 calc(40px + env(safe-area-inset-bottom)); text-align: center; border-top: 1px solid rgba(255,255,255,0.08); }
   footer .cobrand {
-    font-weight: 900; letter-spacing: 4px;
-    font-size: 18px; margin-bottom: 14px; color: var(--cream);
+    font-weight: 800; letter-spacing: 3px;
+    font-size: 15px; margin-bottom: 16px; color: var(--cream);
     line-height: 1.3;
   }
-  footer .links { font-size: 13px; letter-spacing: 4px; font-weight: 700; }
-  footer .links a { margin: 0 14px; color: var(--green); display: inline-block; padding: 8px 4px; }
-  footer .copy { margin-top: 24px; font-size: 12px; opacity: 0.5; color: var(--cream); letter-spacing: 2px; }
+  footer .links { font-size: 12px; letter-spacing: 3px; font-weight: 600; }
+  footer .links a { margin: 0 12px; color: var(--cream-dim); display: inline-block; padding: 8px 4px; }
+  footer .links a:hover { color: var(--pink); text-decoration: none; }
+  footer .copy { margin-top: 24px; font-size: 11px; opacity: 0.5; color: var(--cream); letter-spacing: 2px; }
 
   /* Tablet & mobile */
   @media (max-width: 760px) {
@@ -424,20 +404,18 @@
 
     /* Hero */
     .hero { padding: 40px 0 60px; }
-    .hero .stickers { gap: 16px; max-width: 100%; margin-bottom: 22px; }
-    .sticker { padding: 8px 18px; font-size: 16px; letter-spacing: 1px; }
-    .hero h1 { letter-spacing: -2px; margin: 12px 0; }
-    .hero .tagline { letter-spacing: 4px; margin-top: 12px; }
+    .hero h1 { letter-spacing: -1.5px; margin: 0 0 14px; }
+    .hero .tagline { letter-spacing: 4px; margin-top: 8px; }
     .hero .pitch { margin-top: 20px; padding: 0 4px; }
     .hero .stamp {
-      padding: 14px 22px; letter-spacing: 2px; margin-top: 28px;
-      font-size: clamp(18px, 5vw, 26px);
+      padding: 12px 22px; letter-spacing: 2px; margin-top: 28px;
+      font-size: clamp(16px, 4.5vw, 22px);
     }
     .hero .where { letter-spacing: 3px; font-size: 13px; }
     .hero .meta { letter-spacing: 3px; font-size: 11px; }
     .hero .rsvp {
-      padding: 16px 32px; letter-spacing: 2px; font-size: 14px;
-      margin-top: 24px; min-height: 48px;
+      padding: 14px 28px; letter-spacing: 2px; font-size: 13px;
+      margin-top: 22px; min-height: 48px;
     }
 
     /* Sections */
@@ -487,21 +465,15 @@
   @media (max-width: 480px) {
     .wrap { padding: 0 16px; }
 
-    /* Hero headline floors that actually fit narrow screens */
-    .hero h1 { letter-spacing: -1.5px; }
-    .hero h1 .l1 { font-size: clamp(34px, 11vw, 64px); }
-    .hero h1 .l2 { font-size: clamp(40px, 13vw, 72px); }
-    .hero h1 .l3 {
-      font-size: clamp(54px, 19vw, 100px);
-      -webkit-text-stroke: 2px var(--black);
-    }
-    .hero .tagline { font-size: 14px; letter-spacing: 3px; }
+    /* Hero headline floors that fit narrow screens — uniform across all 3 lines */
+    .hero h1 { letter-spacing: -1px; }
+    .hero h1 .l1,
+    .hero h1 .l2,
+    .hero h1 .l3 { font-size: clamp(36px, 11vw, 64px); }
+    .hero .tagline { font-size: 13px; letter-spacing: 3px; }
     .hero .pitch { font-size: 15px; }
 
-    .sticker { padding: 7px 14px; font-size: 14px; transform: rotate(-4deg); }
-    .sticker.cream { transform: rotate(5deg); }
-
-    section h2 { font-size: clamp(30px, 8vw, 44px); -webkit-text-stroke: 1px var(--black); }
+    section h2 { font-size: clamp(28px, 7vw, 40px); }
     .kicker { letter-spacing: 3px; }
 
     .grid4 { grid-template-columns: 1fr; }
@@ -513,7 +485,7 @@
     summary { font-size: 16px; }
 
     .rsvp-block { padding: 56px 14px; }
-    .rsvp-block .btn { padding: 16px 24px; font-size: 14px; width: 100%; max-width: 320px; }
+    .rsvp-block .btn { padding: 16px 24px; font-size: 13px; width: 100%; max-width: 320px; }
     .qr-card { padding: 16px; box-shadow: 4px 4px 0 var(--black); max-width: 280px; }
     .qr-render { width: 200px; height: 200px; }
     .qr-caption { font-size: 11px; letter-spacing: 3px; }
@@ -522,9 +494,10 @@
   /* Tiny screens — galaxy fold front, etc. */
   @media (max-width: 360px) {
     .wrap { padding: 0 12px; }
-    .hero .stickers { gap: 8px; }
     .brand-mark { font-size: 12px; }
-    .hero h1 .l3 { font-size: clamp(48px, 18vw, 80px); }
+    .hero h1 .l1,
+    .hero h1 .l2,
+    .hero h1 .l3 { font-size: clamp(32px, 11vw, 56px); }
   }
 </style>
 </head>
@@ -565,10 +538,6 @@
 <!-- Hero -->
 <section class="hero" style="border-top: none;">
   <div class="wrap">
-    <div class="stickers">
-      <div class="sticker">Friends.</div>
-      <div class="sticker cream">Of friends.</div>
-    </div>
     <h1>
       <span class="l1">COME MINGLE,</span>
       <span class="l2">BRING YOUR</span>
@@ -581,7 +550,6 @@
     <div class="meta">21+ · NO COVER · 100 SPOTS</div>
     <br>
     <a class="rsvp" href="#rsvp">Save my spot →</a>
-    <div class="countdown"><span id="days">—</span> DAYS TO GO</div>
   </div>
 </section>
 
@@ -777,21 +745,6 @@
     <div class="copy">© 2026 BRING YOUR SINGLES · DENVER, CO · DATING IN PERSON</div>
   </div>
 </footer>
-
-<script>
-  // Countdown to Fri June 19, 2026 5:00 PM Mountain Time (UTC-6 during MDT)
-  (function(){
-    var event = new Date('2026-06-19T17:00:00-06:00').getTime();
-    function tick(){
-      var diff = event - Date.now();
-      var days = Math.max(0, Math.floor(diff / 86400000));
-      var el = document.getElementById('days');
-      if (el) el.textContent = days;
-    }
-    tick();
-    setInterval(tick, 60000);
-  })();
-</script>
 
 <!-- QR code: loads a tiny QR library from jsdelivr and renders an inline SVG pointing at the Partiful RSVP. -->
 <!-- If the library fails to load, the .qr-fallback link inside .qr-render stays visible. -->
