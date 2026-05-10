@@ -1,6 +1,6 @@
 # Come Mingle, Bring Your Singles
 
-Landing page for a friends-of-friends mingle night at Schoolyard Beer Hall, Denver — Friday June 19, 5–9 PM. 21+, no cover, 100 spots, Fresh Barbershop on-site.
+Landing page for a friends-of-friends mingle night at Schoolyard Beer Hall, Denver — Friday June 12, 5–9 PM. 21+, no cover, 100 spots, Fresh Barbershop on-site.
 
 ## What's in here
 
@@ -29,7 +29,7 @@ Hosted on Vercel as a static site. Pushes to `main` auto-deploy via Vercel's Git
 Everything lives in `index.html`. Common edits:
 
 - **RSVP link** — search for `partiful.com/e/` (appears in the QR markup, the RSVP button, the JSON-LD `offers.url`, and the QR-generation script — four spots) and swap the URL.
-- **Date/time** — search for `June 19` (and the ISO timestamps in the countdown script and JSON-LD: `2026-06-19T17:00:00-06:00` / `2026-06-19T21:00:00-06:00`).
+- **Date/time** — search for `June 12` (and the ISO timestamps in the countdown script and JSON-LD: `2026-06-12T17:00:00-06:00` / `2026-06-12T21:00:00-06:00`).
 - **Venue** — search for `Schoolyard Beer Hall`.
 - **Social handles** — search for `bringyoursingles` and `fresh_barbershop_denver`.
 - **Domain** — search for `bringyoursingles.com` (canonical, og:url, JSON-LD URLs all reference it). Update everywhere if you deploy to a different domain.

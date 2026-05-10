@@ -7,24 +7,24 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="format-detection" content="telephone=no">
-<title>Come Mingle, Bring Your Singles · Friday June 19 · Schoolyard · Denver</title>
-<meta name="description" content="Come Mingle, Bring Your Singles — a friends-of-friends mingle night at Schoolyard Beer Hall in Denver. Friday June 19, 5–9 PM. Wristbands at the door. Fresh Barbershop on-site. Dating in person.">
-<meta property="og:title" content="Come Mingle, Bring Your Singles · Fri Jun 19 · Schoolyard Denver">
+<title>Come Mingle, Bring Your Singles · Friday June 12 · Schoolyard · Denver</title>
+<meta name="description" content="Come Mingle, Bring Your Singles — a friends-of-friends mingle night at Schoolyard Beer Hall in Denver. Friday June 12, 5–9 PM. Wristbands at the door. Fresh Barbershop on-site. Dating in person.">
+<meta property="og:title" content="Come Mingle, Bring Your Singles · Fri Jun 12 · Schoolyard Denver">
 <meta property="og:description" content="Friends of friends. Wristbands at the door. Fresh Barbershop on-site. 100 spots, 21+, no cover. Dating in person.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://bringyoursingles.com/">
 <meta property="og:image" content="https://bringyoursingles.com/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Come Mingle, Bring Your Singles — Friday June 19, 5–9 PM, Schoolyard Beer Hall, Denver. Dating in person.">
+<meta property="og:image:alt" content="Come Mingle, Bring Your Singles — Friday June 12, 5–9 PM, Schoolyard Beer Hall, Denver. Dating in person.">
 <meta property="og:site_name" content="Bring Your Singles">
 <meta property="og:locale" content="en_US">
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Come Mingle, Bring Your Singles · Fri Jun 19 · Schoolyard Denver">
+<meta name="twitter:title" content="Come Mingle, Bring Your Singles · Fri Jun 12 · Schoolyard Denver">
 <meta name="twitter:description" content="Friends of friends. Wristbands at the door. Fresh Barbershop on-site. 100 spots, 21+, no cover. Dating in person.">
 <meta name="twitter:image" content="https://bringyoursingles.com/og.png">
-<meta name="twitter:image:alt" content="Come Mingle, Bring Your Singles — Friday June 19, 5–9 PM, Schoolyard Beer Hall, Denver.">
+<meta name="twitter:image:alt" content="Come Mingle, Bring Your Singles — Friday June 12, 5–9 PM, Schoolyard Beer Hall, Denver.">
 
 <!-- NOTE: When deploying to a non-bringyoursingles.com domain, update canonical, og:url, og:image, twitter:image, and the JSON-LD URLs below to match. -->
 <link rel="canonical" href="https://bringyoursingles.com/">
@@ -50,8 +50,8 @@
   "@type": "Event",
   "name": "Come Mingle, Bring Your Singles",
   "description": "A friends-of-friends mingle night at Schoolyard Beer Hall in Denver. Wristbands at the door, Fresh Barbershop on-site, raffles all night. 21+, no cover, 100 spots.",
-  "startDate": "2026-06-19T17:00:00-06:00",
-  "endDate": "2026-06-19T21:00:00-06:00",
+  "startDate": "2026-06-12T17:00:00-06:00",
+  "endDate": "2026-06-12T21:00:00-06:00",
   "eventStatus": "https://schema.org/EventScheduled",
   "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
   "location": {
@@ -334,19 +334,50 @@
   .card h3 { font-weight: 800; letter-spacing: 2px; font-size: 13px; text-transform: uppercase; margin-bottom: 10px; }
   .card p { font-size: 14px; line-height: 1.55; color: #2C2C2C; }
 
-  /* Wristbands */
-  .bands { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; max-width: 880px; margin: 0 auto; }
+  /* Wristbands — illustrated as physical straps wrapping a tag */
+  .bands {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 24px; max-width: 920px; margin: 0 auto;
+    padding-top: 14px;
+  }
   .band {
-    text-align: center; padding: 22px 14px;
+    position: relative;
+    text-align: center;
     background: var(--cream); color: var(--black);
     border-radius: 4px;
+    padding: 38px 16px 24px;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.04);
   }
-  .band .pill {
-    display: inline-block; width: 100%; max-width: 140px; height: 28px;
-    border-radius: 14px; margin-bottom: 16px;
+  .band .strap {
+    position: absolute;
+    top: -11px;
+    left: -10px;
+    right: -10px;
+    height: 22px;
+    border-radius: 999px;
+    filter: drop-shadow(0 2px 0 rgba(0,0,0,0.18));
   }
-  .band h4 { font-size: 13px; letter-spacing: 2px; font-weight: 800; text-transform: uppercase; }
-  .band p { font-size: 13px; color: #4a4a4a; margin-top: 6px; }
+  /* Tiny notch on each end of the strap, suggesting closure points */
+  .band .strap::before,
+  .band .strap::after {
+    content: '';
+    position: absolute; top: 50%;
+    width: 6px; height: 6px;
+    background: rgba(0,0,0,0.18);
+    border-radius: 50%;
+    transform: translateY(-50%);
+  }
+  .band .strap::before { left: 8px; }
+  .band .strap::after { right: 8px; }
+  .band h4 {
+    font-size: 13px; letter-spacing: 2px;
+    font-weight: 800; text-transform: uppercase;
+    margin: 0 0 8px;
+  }
+  .band p {
+    font-size: 13px; color: #4a4a4a;
+    margin: 0; line-height: 1.55;
+  }
 
   /* Optional pins — orientation signaling layer on top of wristbands */
   .pins {
@@ -757,7 +788,7 @@
     <span style="background:#FFD400"></span>
     <span style="background:#3D7BB8"></span>
   </span>
-  Friday June 19 · 5–9 PM · Schoolyard Beer Hall · Denver
+  Friday June 12 · 5–9 PM · Schoolyard Beer Hall · Denver
 </div>
 
 <!-- Nav -->
@@ -795,7 +826,7 @@
     </div>
     <aside class="hero-right">
       <div class="date-block">
-        <span class="date-day">Fri · Jun 19</span>
+        <span class="date-day">Fri · Jun 12</span>
         <span class="date-time">5–9 PM</span>
       </div>
       <span class="where">Schoolyard Beer Hall<br>Denver</span>
@@ -857,22 +888,22 @@
     <p class="lead">No name tags. No icebreaker games unless you want them. Just a wristband that does the awkward part for you.</p>
     <div class="bands">
       <div class="band">
-        <div class="pill" style="background:#08F26E"></div>
+        <div class="strap" style="background:#08F26E"></div>
         <h4>Single</h4>
         <p>Open to meeting new people. Any gender — that's what the pins are for.</p>
       </div>
       <div class="band">
-        <div class="pill" style="background:#FF2E63"></div>
+        <div class="strap" style="background:#FF2E63"></div>
         <h4>Taken</h4>
         <p>Here for the vibe. Not in the dating market tonight.</p>
       </div>
       <div class="band">
-        <div class="pill" style="background:#FFD400"></div>
+        <div class="strap" style="background:#FFD400"></div>
         <h4>Curious</h4>
         <p>Open to a conversation. Where it goes is wherever it goes.</p>
       </div>
       <div class="band">
-        <div class="pill" style="background:#3D7BB8"></div>
+        <div class="strap" style="background:#3D7BB8"></div>
         <h4>Ally</h4>
         <p>Here in support — matchmaker, wingman, LGBTQ+ ally, or just along for the night. Off the dating market.</p>
       </div>
@@ -1052,7 +1083,7 @@
       </div>
     </div>
     <a class="btn" href="https://partiful.com/e/qSlcrRZX3YZ93JsiHmwg?c=oiTxD0S0" target="_blank" rel="noopener">RSVP on Partiful →</a>
-    <span class="small">Friday June 19 · 5–9 PM · Schoolyard Beer Hall · Denver · 21+ · No cover</span>
+    <span class="small">Friday June 12 · 5–9 PM · Schoolyard Beer Hall · Denver · 21+ · No cover</span>
   </div>
 </section>
 
