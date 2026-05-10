@@ -7,6 +7,8 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="format-detection" content="telephone=no">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="googlebot" content="index, follow">
 <title>Come Mingle, Bring Your Singles · Friday June 12 · Schoolyard · Denver</title>
 <meta name="description" content="Come Mingle, Bring Your Singles — a friends-of-friends mingle night at Schoolyard Beer Hall in Denver. Friday June 12, 5–9 PM. Name tags + color stickers at the door, free beer for the first 25 in, couples pitch their single friends at 6:30. Dating in person.">
 <meta property="og:title" content="Come Mingle, Bring Your Singles · Fri Jun 12 · Schoolyard Denver">
@@ -29,6 +31,22 @@
 <!-- NOTE: When deploying to a non-bringyoursingles.com domain, update canonical, og:url, og:image, twitter:image, and the JSON-LD URLs below to match. -->
 <link rel="canonical" href="https://bringyoursingles.com/">
 
+<!-- Author + content meta -->
+<meta name="author" content="Bring Your Singles">
+<meta name="publisher" content="Bring Your Singles">
+<meta name="keywords" content="Denver dating event, Denver singles night, Denver mingle, friends of friends dating, in-person dating Denver, Schoolyard Beer Hall, Bring Your Singles, dating in person, Denver Friday night, Denver matchmaking, Come Mingle">
+
+<!-- Geo / local SEO meta -->
+<meta name="geo.region" content="US-CO">
+<meta name="geo.placename" content="Denver">
+<meta name="ICBM" content="39.7392, -104.9903">
+<meta property="og:locality" content="Denver">
+<meta property="og:region" content="CO">
+<meta property="og:country-name" content="USA">
+
+<!-- Pinterest description (uses og:description by default — explicit version helps) -->
+<meta name="pinterest-rich-pin" content="true">
+
 <!-- Favicon set -->
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="apple-touch-icon" href="/apple-touch-icon.svg">
@@ -49,9 +67,11 @@
   "@context": "https://schema.org",
   "@type": "Event",
   "name": "Come Mingle, Bring Your Singles",
+  "alternateName": "Come Mingle, Bring Your Singles · Vol. 01",
   "description": "A friends-of-friends mingle night at Schoolyard Beer Hall in Denver. Name tags + color stickers at the door, free beer for the first 25 in, couples pitch their single friends at 6:30. 21+, no cover, 100 spots.",
   "startDate": "2026-06-12T17:00:00-06:00",
   "endDate": "2026-06-12T21:00:00-06:00",
+  "doorTime": "2026-06-12T17:00:00-06:00",
   "eventStatus": "https://schema.org/EventScheduled",
   "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
   "location": {
@@ -62,15 +82,28 @@
       "addressLocality": "Denver",
       "addressRegion": "CO",
       "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 39.7392,
+      "longitude": -104.9903
     }
   },
   "organizer": {
     "@type": "Organization",
     "name": "Bring Your Singles",
     "url": "https://bringyoursingles.com",
-    "email": "hello@bringyoursingles.com"
+    "email": "hello@bringyoursingles.com",
+    "logo": "https://bringyoursingles.com/apple-touch-icon.svg",
+    "sameAs": [
+      "https://instagram.com/bringyoursingles"
+    ]
   },
   "performer": [
+    { "@type": "Organization", "name": "Schoolyard Beer Hall" },
+    { "@type": "Organization", "name": "Fresh Barbershop Denver", "sameAs": "https://instagram.com/fresh_barbershop_denver" }
+  ],
+  "sponsor": [
     { "@type": "Organization", "name": "Schoolyard Beer Hall" },
     { "@type": "Organization", "name": "Fresh Barbershop Denver" }
   ],
@@ -78,15 +111,177 @@
   "url": "https://bringyoursingles.com/",
   "offers": {
     "@type": "Offer",
+    "name": "Free RSVP",
     "price": "0",
     "priceCurrency": "USD",
     "availability": "https://schema.org/InStock",
     "url": "https://partiful.com/e/qSlcrRZX3YZ93JsiHmwg?c=oiTxD0S0",
-    "validFrom": "2026-04-30"
+    "validFrom": "2026-04-30",
+    "category": "Free admission"
   },
+  "maximumAttendeeCapacity": 100,
+  "remainingAttendeeCapacity": 100,
   "isAccessibleForFree": true,
   "typicalAgeRange": "21+",
+  "audience": {
+    "@type": "PeopleAudience",
+    "suggestedMinAge": 21,
+    "audienceType": "Singles, couples, and friends in Denver — ages 24–34"
+  },
+  "keywords": "Denver dating event, singles night Denver, friends of friends mingle, in-person dating, Schoolyard Beer Hall, Fresh Barbershop Denver, free Denver event",
   "inLanguage": "en"
+}
+</script>
+
+<!-- Organization schema — gives Google a brand entity to attach social profiles + logo to -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Bring Your Singles",
+  "alternateName": "Come Mingle, Bring Your Singles",
+  "url": "https://bringyoursingles.com",
+  "logo": "https://bringyoursingles.com/apple-touch-icon.svg",
+  "email": "hello@bringyoursingles.com",
+  "foundingDate": "2026",
+  "foundingLocation": {
+    "@type": "Place",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Denver",
+      "addressRegion": "CO",
+      "addressCountry": "US"
+    }
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Denver",
+    "containedInPlace": { "@type": "State", "name": "Colorado" }
+  },
+  "sameAs": [
+    "https://instagram.com/bringyoursingles"
+  ],
+  "slogan": "Dating in person.",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "hello@bringyoursingles.com",
+    "contactType": "customer support",
+    "areaServed": "US"
+  }
+}
+</script>
+
+<!-- WebSite schema — helps with site name / brand consolidation in SERPs -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Bring Your Singles",
+  "alternateName": "Come Mingle, Bring Your Singles",
+  "url": "https://bringyoursingles.com",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Bring Your Singles"
+  },
+  "inLanguage": "en-US"
+}
+</script>
+
+<!-- FAQPage schema — mirrors the FAQ section so Google can show FAQ rich results -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is this speed dating?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. There's no rotating chairs, no buzzer, no timer on your conversation. It's a beer hall full of people who are open to meeting people, with name tags and color stickers so you don't have to ask awkward questions. You can mingle, sit with your friends, ignore everyone — it's a Friday night."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "I'm in a couple. Can I come?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — and you should. The whole concept is friends of friends. Couples and partners are the best matchmakers. Bring the single friend you've been meaning to set up for the last three years. Wear a red sticker on your name tag so single people know."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this LGBTQ+ inclusive?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fully. Every gender and orientation is welcome — the sticker legend is intentionally orientation-neutral so nobody has to label anything they don't want to label. The optional pins at the door are how people signal who they're open to meeting (open to women, open to men, open to all) — pick one up, skip them all, whatever feels right. The Ally sticker exists for anyone here in support, including LGBTQ+ allies who want to be part of the night without being part of the dating market."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why 'Dating in person'?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because the best couples we know all started with a friend introducing them at a Friday-night thing. This is a bigger version of that — your group chat scaled up to a beer hall."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the catch?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "None. It's free, it's 21+, no cover. We cap RSVPs at 100 because the curation is the whole point — we want a room full of friends-of-friends, not a public bar event."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I have to RSVP?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — please. We're capped at 100, and it helps Schoolyard plan staffing and Fresh plan their chair-side work. Walk-ins are welcome only if we haven't hit cap."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it 21+?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Schoolyard is a beer hall. Bring ID."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What should I wear?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Whatever you'd wear to a beer hall on a Friday night. We're not running a gala. Jeans are a yes. Cute top is a yes. The shirt you stole from your roommate is a yes. If you can't be trusted with your hair, Fresh has a chair on-site for touch-ups."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if I don't know anyone?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Then this is the event for you. Friends of friends means every group started with someone who showed up alone. Grab a name tag, grab a drink, you'll be talking to someone in five minutes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where exactly is Schoolyard?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Schoolyard Beer Hall, Denver. Full address and a Google Maps pin go out in the RSVP confirmation email. If you've ever ended up there on a Friday, you already know the room."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I get there?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Lyft from most central Denver neighborhoods runs about ten to fifteen minutes — usually under twenty bucks if you split it. Street parking around the venue is free but fills up fast on Fridays; plan for a five-minute walk if you're driving. We'll send turn-by-turn details in the confirmation email."
+      }
+    }
+  ]
 }
 </script>
 <style>
@@ -986,7 +1181,7 @@
       </details>
       <details>
         <summary>Do I have to RSVP?</summary>
-        <p>Yes — please. We're capped at 100, and it helps Schoolyard plan staffing and Fresh plan chair time. Walk-ins are welcome only if we haven't hit cap.</p>
+        <p>Yes — please. We're capped at 100, and it helps Schoolyard plan staffing and Fresh plan their chair-side work. Walk-ins are welcome only if we haven't hit cap.</p>
       </details>
       <details>
         <summary>Is it 21+?</summary>
@@ -994,7 +1189,7 @@
       </details>
       <details>
         <summary>What should I wear?</summary>
-        <p>Whatever you'd wear to a beer hall on a Friday night. We're not running a gala. Jeans are a yes. Cute top is a yes. The shirt you stole from your roommate is a yes. If you can't be trusted with your hair, Fresh's chair opens at 7:30.</p>
+        <p>Whatever you'd wear to a beer hall on a Friday night. We're not running a gala. Jeans are a yes. Cute top is a yes. The shirt you stole from your roommate is a yes. If you can't be trusted with your hair, Fresh has a chair on-site for touch-ups.</p>
       </details>
       <details>
         <summary>What if I don't know anyone?</summary>
@@ -1087,7 +1282,7 @@
   <div class="wrap">
     <div class="cobrand">SCHOOLYARD ✕ FRESH BARBERSHOP DENVER</div>
     <div class="links">
-      <a href="https://instagram.com/bringyoursingles" target="_blank" rel="noopener">@bringyoursingles</a>
+      <a href="https://instagram.com/bringyoursingles" target="_blank" rel="me noopener">@bringyoursingles</a>
       <a href="https://instagram.com/fresh_barbershop_denver" target="_blank" rel="noopener">@fresh_barbershop_denver</a>
       <a href="mailto:hello@bringyoursingles.com">hello@bringyoursingles.com</a>
     </div>

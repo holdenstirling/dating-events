@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://bringyoursingles.com/</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://bringyoursingles.com/og.png</image:loc>
+      <image:title>Come Mingle, Bring Your Singles — Friday June 12, Schoolyard Beer Hall, Denver</image:title>
+      <image:caption>A friends-of-friends mingle night in Denver. Friday June 12, 5–9 PM.</image:caption>
+    </image:image>
   </url>
 </urlset>
