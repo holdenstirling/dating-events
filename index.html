@@ -8,9 +8,9 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="format-detection" content="telephone=no">
 <title>Come Mingle, Bring Your Singles · Friday June 12 · Schoolyard · Denver</title>
-<meta name="description" content="Come Mingle, Bring Your Singles — a friends-of-friends mingle night at Schoolyard Beer Hall in Denver. Friday June 12, 5–9 PM. Name tags + wristbands at the door, free beer for the first 25 in, couples pitch their single friends at 6:30. Dating in person.">
+<meta name="description" content="Come Mingle, Bring Your Singles — a friends-of-friends mingle night at Schoolyard Beer Hall in Denver. Friday June 12, 5–9 PM. Name tags + color stickers at the door, free beer for the first 25 in, couples pitch their single friends at 6:30. Dating in person.">
 <meta property="og:title" content="Come Mingle, Bring Your Singles · Fri Jun 12 · Schoolyard Denver">
-<meta property="og:description" content="Friends of friends. Name tags + wristbands at the door. Couples pitch their singles. First 25 in get a free beer. 100 spots, 21+, no cover. Dating in person.">
+<meta property="og:description" content="Friends of friends. Name tags + color stickers at the door. Couples pitch their singles. First 25 in get a free beer. 100 spots, 21+, no cover. Dating in person.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://bringyoursingles.com/">
 <meta property="og:image" content="https://bringyoursingles.com/og.png">
@@ -22,7 +22,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Come Mingle, Bring Your Singles · Fri Jun 12 · Schoolyard Denver">
-<meta name="twitter:description" content="Friends of friends. Name tags + wristbands at the door. Couples pitch their singles. First 25 in get a free beer. 100 spots, 21+, no cover. Dating in person.">
+<meta name="twitter:description" content="Friends of friends. Name tags + color stickers at the door. Couples pitch their singles. First 25 in get a free beer. 100 spots, 21+, no cover. Dating in person.">
 <meta name="twitter:image" content="https://bringyoursingles.com/og.png">
 <meta name="twitter:image:alt" content="Come Mingle, Bring Your Singles — Friday June 12, 5–9 PM, Schoolyard Beer Hall, Denver.">
 
@@ -49,7 +49,7 @@
   "@context": "https://schema.org",
   "@type": "Event",
   "name": "Come Mingle, Bring Your Singles",
-  "description": "A friends-of-friends mingle night at Schoolyard Beer Hall in Denver. Name tags + wristbands at the door, free beer for the first 25 in, couples pitch their single friends at 6:30. 21+, no cover, 100 spots.",
+  "description": "A friends-of-friends mingle night at Schoolyard Beer Hall in Denver. Name tags + color stickers at the door, free beer for the first 25 in, couples pitch their single friends at 6:30. 21+, no cover, 100 spots.",
   "startDate": "2026-06-12T17:00:00-06:00",
   "endDate": "2026-06-12T21:00:00-06:00",
   "eventStatus": "https://schema.org/EventScheduled",
@@ -96,7 +96,7 @@
     --pink: #D94364;        /* deep coral, no longer screaming neon */
     --pink-deep: #B53353;
     --green: #5A8B5C;       /* muted moss, used sparingly */
-    --yellow: #E8C547;      /* dimmed gold for wristband only */
+    --yellow: #E8C547;      /* dimmed gold for sticker only */
     --cream: #F8F2E4;
     --cream-dim: #DDD6C8;
     --blue: #3D7BB8;
@@ -151,7 +151,7 @@
     outline-color: var(--black);
   }
 
-  /* Top wristband bar */
+  /* Top color-dot bar */
   .topbar {
     background: var(--black);
     color: var(--cream);
@@ -164,8 +164,8 @@
     border-bottom: 2px solid var(--pink);
     line-height: 1.4;
   }
-  .topbar .stripes { display: inline-flex; gap: 5px; margin-right: 16px; vertical-align: middle; }
-  .topbar .stripes span { width: 22px; height: 9px; }
+  .topbar .stripes { display: inline-flex; gap: 6px; margin-right: 16px; vertical-align: middle; }
+  .topbar .stripes span { width: 12px; height: 12px; border-radius: 50%; }
 
   /* Nav */
   nav {
@@ -334,41 +334,30 @@
   .card h3 { font-weight: 800; letter-spacing: 2px; font-size: 13px; text-transform: uppercase; margin-bottom: 10px; }
   .card p { font-size: 14px; line-height: 1.55; color: #2C2C2C; }
 
-  /* Wristbands — illustrated as physical straps wrapping a tag */
+  /* Stickers — circular color badge sitting on top of a name-tag card */
   .bands {
     display: grid; grid-template-columns: repeat(4, 1fr);
     gap: 24px; max-width: 920px; margin: 0 auto;
-    padding-top: 14px;
+    padding-top: 28px;
   }
   .band {
     position: relative;
     text-align: center;
     background: var(--cream); color: var(--black);
     border-radius: 4px;
-    padding: 38px 16px 24px;
+    padding: 56px 16px 24px;
     box-shadow: 0 1px 0 rgba(0,0,0,0.04);
   }
   .band .strap {
     position: absolute;
-    top: -11px;
-    left: -10px;
-    right: -10px;
-    height: 22px;
-    border-radius: 999px;
-    filter: drop-shadow(0 2px 0 rgba(0,0,0,0.18));
-  }
-  /* Tiny notch on each end of the strap, suggesting closure points */
-  .band .strap::before,
-  .band .strap::after {
-    content: '';
-    position: absolute; top: 50%;
-    width: 6px; height: 6px;
-    background: rgba(0,0,0,0.18);
+    top: -22px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
-    transform: translateY(-50%);
+    box-shadow: 0 3px 0 rgba(0,0,0,0.18);
   }
-  .band .strap::before { left: 8px; }
-  .band .strap::after { right: 8px; }
   .band h4 {
     font-size: 13px; letter-spacing: 2px;
     font-weight: 800; text-transform: uppercase;
@@ -379,7 +368,7 @@
     margin: 0; line-height: 1.55;
   }
 
-  /* Optional pins — orientation signaling layer on top of wristbands */
+  /* Optional pins — orientation signaling layer on top of stickers */
   .pins {
     margin-top: 56px;
     padding-top: 48px;
@@ -659,8 +648,8 @@
 
     /* Topbar — let the long line wrap cleanly */
     .topbar { font-size: 11px; letter-spacing: 2px; padding: 10px 14px; }
-    .topbar .stripes { margin-right: 10px; gap: 4px; }
-    .topbar .stripes span { width: 16px; height: 7px; }
+    .topbar .stripes { margin-right: 10px; gap: 5px; }
+    .topbar .stripes span { width: 10px; height: 10px; border-radius: 50%; }
 
     /* Nav */
     nav { padding: 16px 0; gap: 12px; }
@@ -704,9 +693,10 @@
     .card .num { width: 38px; height: 38px; line-height: 32px; font-size: 17px; }
     .card h3 { letter-spacing: 2px; }
 
-    /* Wristbands */
-    .bands { grid-template-columns: 1fr 1fr; gap: 12px; }
-    .band { padding: 18px 12px; }
+    /* Stickers */
+    .bands { grid-template-columns: 1fr 1fr; gap: 24px; padding-top: 24px; }
+    .band { padding: 44px 12px 18px; }
+    .band .strap { width: 36px; height: 36px; top: -18px; }
     .band h4 { letter-spacing: 2px; }
 
     /* Schedule */
@@ -780,7 +770,7 @@
 
 <a class="skip-link" href="#what">Skip to content</a>
 
-<!-- Top bar with wristband stripes -->
+<!-- Top bar with sticker color dots -->
 <div class="topbar">
   <span class="stripes">
     <span style="background:#08F26E"></span>
@@ -801,6 +791,7 @@
     <ul>
       <li><a href="#what">What it is</a></li>
       <li><a href="#pitch">The Pitch</a></li>
+      <li><a href="#stickers">Stickers</a></li>
       <li><a href="#schedule">Schedule</a></li>
       <li><a href="#faq">FAQ</a></li>
       <li><a class="cta" href="#rsvp">RSVP</a></li>
@@ -821,7 +812,7 @@
         <span class="l3">Singles.</span>
       </h1>
       <div class="tagline">— A Denver dating event, in person —</div>
-      <p class="pitch"><em>Bring the single you've been trying to set up for years.</em> 100 people, all friends of friends, all in a Denver beer hall on a Friday night. Name tags + wristbands at the door, free beer for the first 25 in. Just the actual humans your group chat keeps mentioning.</p>
+      <p class="pitch"><em>Bring the single you've been trying to set up for years.</em> 100 people, all friends of friends, all in a Denver beer hall on a Friday night. Name tags + color stickers at the door, free beer for the first 25 in. Just the actual humans your group chat keeps mentioning.</p>
       <a class="rsvp" href="#rsvp">Save my spot →</a>
     </div>
     <aside class="hero-right">
@@ -857,8 +848,8 @@
     <div class="grid4">
       <div class="card">
         <div class="num">1</div>
-        <h3>Name Tags + Wristbands</h3>
-        <p>Write your name, slap on a color sticker, grab the matching wristband. Single, taken, curious, ally — you'll know who's who in three seconds.</p>
+        <h3>Name Tags + Stickers</h3>
+        <p>Write your name, slap on a color sticker. Single, taken, curious, ally — you'll know who's who in three seconds.</p>
       </div>
       <div class="card green">
         <div class="num">2</div>
@@ -879,13 +870,13 @@
   </div>
 </section>
 
-<!-- Wristband legend -->
-<section id="wristbands">
+<!-- Sticker legend -->
+<section id="stickers">
   <div class="section-num">03</div>
   <div class="wrap">
-    <div class="kicker">— Name tags + wristband legend —</div>
+    <div class="kicker">— Name tag sticker legend —</div>
     <h2>How the room works.</h2>
-    <p class="lead">Name tag with your name, color sticker for your status, wristband to match. No icebreaker games unless you want them — the colors do the awkward part for you.</p>
+    <p class="lead">Name tag with your name. Color sticker for where you're at. No icebreaker games unless you want them — the dot on your chest does the awkward part for you.</p>
     <div class="bands">
       <div class="band">
         <div class="strap" style="background:#08F26E"></div>
@@ -912,8 +903,8 @@
     <!-- Optional pin layer for orientation signaling -->
     <div class="pins">
       <div class="micro">— Optional pins —</div>
-      <h3>The wristband says how. The pin says who.</h3>
-      <p class="pins-lead">Anyone with a Single or Curious wristband can grab a pin at the door if they want to signal who they're open to meeting. Optional, removable, no labels you don't pick up yourself. All genders, all orientations welcome — the pins just save you a few awkward sentences.</p>
+      <h3>The sticker says how. The pin says who.</h3>
+      <p class="pins-lead">Anyone with a Single or Curious sticker can grab a pin at the door if they want to signal who they're open to meeting. Optional, removable, no labels you don't pick up yourself. All genders, all orientations welcome — the pins just save you a few awkward sentences.</p>
       <div class="pin-grid">
         <div class="pin"><span class="dot dot-pink"></span><span>Open to women</span></div>
         <div class="pin"><span class="dot dot-blue"></span><span>Open to men</span></div>
@@ -945,7 +936,7 @@
         <div class="time">5:00</div>
         <div>
           <h4>Doors Open</h4>
-          <p>Walk in, write your name, grab a color sticker + wristband. First 25 in get a free beer on the house.</p>
+          <p>Walk in, write your name, slap on a color sticker. First 25 in get a free beer on the house.</p>
         </div>
       </div>
       <div class="row">
@@ -975,15 +966,15 @@
     <div class="faq">
       <details>
         <summary>Is this speed dating?</summary>
-        <p>No. There's no rotating chairs, no buzzer, no timer on your conversation. It's a beer hall full of people who are open to meeting people, with name tags + colored wristbands so you don't have to ask awkward questions. You can mingle, sit with your friends, ignore everyone — it's a Friday night.</p>
+        <p>No. There's no rotating chairs, no buzzer, no timer on your conversation. It's a beer hall full of people who are open to meeting people, with name tags and color stickers so you don't have to ask awkward questions. You can mingle, sit with your friends, ignore everyone — it's a Friday night.</p>
       </details>
       <details>
         <summary>I'm in a couple. Can I come?</summary>
-        <p>Yes — and you should. The whole concept is "friends of friends." Couples and partners are the best matchmakers. Bring the single friend you've been meaning to set up for the last three years. Show up wearing red wristbands so single people know.</p>
+        <p>Yes — and you should. The whole concept is "friends of friends." Couples and partners are the best matchmakers. Bring the single friend you've been meaning to set up for the last three years. Wear a red sticker on your name tag so single people know.</p>
       </details>
       <details>
         <summary>Is this LGBTQ+ inclusive?</summary>
-        <p>Fully. Every gender and orientation is welcome — the wristband legend is intentionally orientation-neutral so nobody has to label anything they don't want to label. The optional pins at the door are how people signal who they're open to meeting (open to women, open to men, open to all) — pick one up, skip them all, whatever feels right. The Ally band exists for anyone here in support, including LGBTQ+ allies who want to be part of the night without being part of the dating market.</p>
+        <p>Fully. Every gender and orientation is welcome — the sticker legend is intentionally orientation-neutral so nobody has to label anything they don't want to label. The optional pins at the door are how people signal who they're open to meeting (open to women, open to men, open to all) — pick one up, skip them all, whatever feels right. The Ally sticker exists for anyone here in support, including LGBTQ+ allies who want to be part of the night without being part of the dating market.</p>
       </details>
       <details>
         <summary>Why "Dating in person"?</summary>
@@ -1007,7 +998,7 @@
       </details>
       <details>
         <summary>What if I don't know anyone?</summary>
-        <p>Then this is the event for you. Friends of friends means every group started with someone who showed up alone. Grab a wristband, grab a drink, you'll be talking to someone in five minutes.</p>
+        <p>Then this is the event for you. Friends of friends means every group started with someone who showed up alone. Grab a name tag, grab a drink, you'll be talking to someone in five minutes.</p>
       </details>
       <details>
         <summary>Where exactly is Schoolyard?</summary>
@@ -1063,7 +1054,7 @@
   <div class="wrap">
     <div class="kicker">— RSVP —</div>
     <h2>100 spots. Save yours.</h2>
-    <p class="lead">Free. Friends of friends only. Locks in your wristband for the door.</p>
+    <p class="lead">Free. Friends of friends only. Locks in your name tag for the door.</p>
     <div class="qr-wrap">
       <div class="qr-card">
         <div class="qr-render" id="qr-svg" aria-label="QR code linking to the Partiful RSVP page">
