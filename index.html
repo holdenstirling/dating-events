@@ -93,7 +93,7 @@
     "@type": "Organization",
     "name": "Bring Your Singles",
     "url": "https://bringyoursingles.com",
-    "email": "hello@bringyoursingles.com",
+    "email": "holdenstirling@gmail.com",
     "logo": "https://bringyoursingles.com/apple-touch-icon.svg",
     "sameAs": [
       "https://instagram.com/bringyoursingles"
@@ -142,7 +142,7 @@
   "alternateName": "Come Mingle, Bring Your Singles",
   "url": "https://bringyoursingles.com",
   "logo": "https://bringyoursingles.com/apple-touch-icon.svg",
-  "email": "hello@bringyoursingles.com",
+  "email": "holdenstirling@gmail.com",
   "foundingDate": "2026",
   "foundingLocation": {
     "@type": "Place",
@@ -164,7 +164,7 @@
   "slogan": "Dating in person.",
   "contactPoint": {
     "@type": "ContactPoint",
-    "email": "hello@bringyoursingles.com",
+    "email": "holdenstirling@gmail.com",
     "contactType": "customer support",
     "areaServed": "US"
   }
@@ -214,7 +214,7 @@
       "name": "Is this LGBTQ+ inclusive?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Fully. Every gender and orientation is welcome — the sticker legend is intentionally orientation-neutral so nobody has to label anything they don't want to label. The optional pins at the door are how people signal who they're open to meeting (open to women, open to men, open to all) — pick one up, skip them all, whatever feels right. The Ally sticker exists for anyone here in support, including LGBTQ+ allies who want to be part of the night without being part of the dating market."
+        "text": "Fully. Every gender and orientation is welcome — the sticker legend is intentionally orientation-neutral so nobody has to label anything they don't want to label. The Ally sticker exists for anyone here in support, including LGBTQ+ allies who want to be part of the night without being part of the dating market."
       }
     },
     {
@@ -529,6 +529,29 @@
   .card h3 { font-weight: 800; letter-spacing: 2px; font-size: 13px; text-transform: uppercase; margin-bottom: 10px; }
   .card p { font-size: 14px; line-height: 1.55; color: #2C2C2C; }
 
+  /* Outcomes — 3-up grid for 'how the night ends' */
+  .outcomes {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 22px; max-width: 980px; margin: 0 auto;
+  }
+  .outcome {
+    background: var(--cream); color: var(--black);
+    padding: 36px 26px; border-radius: 4px;
+    text-align: left;
+    position: relative;
+  }
+  .outcome .dot {
+    width: 14px; height: 14px; border-radius: 50%;
+    display: inline-block; margin-bottom: 18px;
+  }
+  .outcome h3 {
+    font-family: var(--serif); font-weight: 700;
+    font-size: clamp(20px, 2.2vw, 24px);
+    color: var(--black); margin-bottom: 12px;
+    letter-spacing: -0.3px; line-height: 1.2;
+  }
+  .outcome p { font-size: 15px; line-height: 1.6; color: #2C2C2C; }
+
   /* Stickers — circular color badge sitting on top of a name-tag card */
   .bands {
     display: grid; grid-template-columns: repeat(4, 1fr);
@@ -561,53 +584,6 @@
   .band p {
     font-size: 13px; color: #4a4a4a;
     margin: 0; line-height: 1.55;
-  }
-
-  /* Optional pins — orientation signaling layer on top of stickers */
-  .pins {
-    margin-top: 56px;
-    padding-top: 48px;
-    border-top: 1px solid rgba(255,255,255,0.08);
-    text-align: center;
-  }
-  .pins .micro {
-    font-size: 11px; letter-spacing: 4px; color: var(--pink);
-    text-transform: uppercase; font-weight: 700;
-  }
-  .pins h3 {
-    font-family: var(--serif); font-weight: 700;
-    font-size: clamp(22px, 3vw, 30px); color: var(--cream);
-    margin: 8px 0 12px; letter-spacing: -0.3px;
-  }
-  .pins-lead {
-    max-width: 640px;
-    margin: 0 auto 32px;
-    font-size: 16px;
-    color: var(--cream-dim);
-    line-height: 1.6;
-  }
-  .pin-grid {
-    display: flex; justify-content: center;
-    gap: 14px; flex-wrap: wrap;
-    max-width: 720px; margin: 0 auto;
-  }
-  .pin {
-    display: inline-flex; align-items: center; gap: 10px;
-    background: var(--cream); color: var(--black);
-    padding: 12px 20px;
-    border-radius: 999px;
-    font-size: 12px; font-weight: 700; letter-spacing: 1.5px;
-    text-transform: uppercase;
-  }
-  .pin .dot {
-    width: 14px; height: 14px;
-    border-radius: 50%;
-    flex-shrink: 0;
-  }
-  .pin .dot-pink { background: #E8669A; }
-  .pin .dot-blue { background: #4A8FBF; }
-  .pin .dot-rainbow {
-    background: linear-gradient(90deg, #E8669A 0%, #FFD400 50%, #4A8FBF 100%);
   }
 
   /* Schedule */
@@ -888,6 +864,10 @@
     .card .num { width: 38px; height: 38px; line-height: 32px; font-size: 17px; }
     .card h3 { letter-spacing: 2px; }
 
+    /* Outcomes — stack on tablet/mobile */
+    .outcomes { grid-template-columns: 1fr; gap: 14px; max-width: 560px; }
+    .outcome { padding: 28px 22px; }
+
     /* Stickers */
     .bands { grid-template-columns: 1fr 1fr; gap: 24px; padding-top: 24px; }
     .band { padding: 44px 12px 18px; }
@@ -1076,7 +1056,7 @@
       <div class="band">
         <div class="strap" style="background:#08F26E"></div>
         <h4>Single</h4>
-        <p>Open to meeting new people. Any gender — that's what the pins are for.</p>
+        <p>Open to meeting new people. All genders, all orientations welcome.</p>
       </div>
       <div class="band">
         <div class="strap" style="background:#FF2E63"></div>
@@ -1095,17 +1075,6 @@
       </div>
     </div>
 
-    <!-- Optional pin layer for orientation signaling -->
-    <div class="pins">
-      <div class="micro">— Optional pins —</div>
-      <h3>The sticker says how. The pin says who.</h3>
-      <p class="pins-lead">Anyone with a Single or Curious sticker can grab a pin at the door if they want to signal who they're open to meeting. Optional, removable, no labels you don't pick up yourself. All genders, all orientations welcome — the pins just save you a few awkward sentences.</p>
-      <div class="pin-grid">
-        <div class="pin"><span class="dot dot-pink"></span><span>Open to women</span></div>
-        <div class="pin"><span class="dot dot-blue"></span><span>Open to men</span></div>
-        <div class="pin"><span class="dot dot-rainbow"></span><span>Open to all</span></div>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -1152,9 +1121,36 @@
   </div>
 </section>
 
-<!-- FAQ -->
-<section id="faq" class="alt">
+<!-- How the night ends — outcomes -->
+<section id="outcomes" class="alt">
   <div class="section-num">06</div>
+  <div class="wrap">
+    <div class="kicker">— How the night ends —</div>
+    <h2>By 9 PM, this is the room.</h2>
+    <p class="lead">If we did this right, the night doesn't end with strangers leaving the way they came in. Three things we want everyone walking out with — pick yours.</p>
+    <div class="outcomes">
+      <div class="outcome">
+        <span class="dot" style="background:#D94364"></span>
+        <h3>Couples leaving with new couple friends.</h3>
+        <p>Group plans get a lot easier when the four of you actually like each other. Find your next dinner party here.</p>
+      </div>
+      <div class="outcome">
+        <span class="dot" style="background:#3D7BB8"></span>
+        <h3>Strangers leaving as friends.</h3>
+        <p>New people, new contacts, new "we should grab coffee" — even if love isn't the headline tonight.</p>
+      </div>
+      <div class="outcome">
+        <span class="dot" style="background:#5A8B5C"></span>
+        <h3>Singles leaving with someone.</h3>
+        <p>A number, a date, a story to tell on Monday. The point of the night, plain and simple.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="section-num">07</div>
   <div class="wrap">
     <div class="kicker">— Questions —</div>
     <h2>You probably want to ask.</h2>
@@ -1169,7 +1165,7 @@
       </details>
       <details>
         <summary>Is this LGBTQ+ inclusive?</summary>
-        <p>Fully. Every gender and orientation is welcome — the sticker legend is intentionally orientation-neutral so nobody has to label anything they don't want to label. The optional pins at the door are how people signal who they're open to meeting (open to women, open to men, open to all) — pick one up, skip them all, whatever feels right. The Ally sticker exists for anyone here in support, including LGBTQ+ allies who want to be part of the night without being part of the dating market.</p>
+        <p>Fully. Every gender and orientation is welcome — the sticker legend is intentionally orientation-neutral so nobody has to label anything they don't want to label. The Ally sticker exists for anyone here in support, including LGBTQ+ allies who want to be part of the night without being part of the dating market.</p>
       </details>
       <details>
         <summary>Why "Dating in person"?</summary>
@@ -1208,8 +1204,8 @@
 </section>
 
 <!-- Partners — tiered hierarchy -->
-<section id="partners">
-  <div class="section-num">07</div>
+<section id="partners" class="alt">
+  <div class="section-num">08</div>
   <div class="wrap">
     <div class="kicker">— Built with Denver —</div>
     <h2>The room takes a village.</h2>
@@ -1239,7 +1235,7 @@
     <div class="partner-cta">
       <h3>Run a Denver business?</h3>
       <p>We're booking partners for Vol. 02 already — coffee shops, florists, photographers, boutiques, gyms, anyone who wants their brand in front of 100 friends-of-friends on a Friday night.</p>
-      <a href="mailto:hello@bringyoursingles.com?subject=Vol.%2002%20partnership">Become a partner →</a>
+      <a href="mailto:holdenstirling@gmail.com?subject=Vol.%2002%20partnership">Become a partner →</a>
     </div>
   </div>
 </section>
@@ -1284,7 +1280,7 @@
     <div class="links">
       <a href="https://instagram.com/bringyoursingles" target="_blank" rel="me noopener">@bringyoursingles</a>
       <a href="https://instagram.com/fresh_barbershop_denver" target="_blank" rel="noopener">@fresh_barbershop_denver</a>
-      <a href="mailto:hello@bringyoursingles.com">hello@bringyoursingles.com</a>
+      <a href="mailto:holdenstirling@gmail.com">holdenstirling@gmail.com</a>
     </div>
     <div class="copy">© 2026 BRING YOUR SINGLES · DENVER, CO · DATING IN PERSON</div>
   </div>
