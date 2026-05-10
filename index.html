@@ -10,9 +10,9 @@
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <meta name="googlebot" content="index, follow">
 <title>Come Mingle, Bring Your Singles · Friday June 12 · Schoolyard · Denver</title>
-<meta name="description" content="Come Mingle, Bring Your Singles — a friends-of-friends mingle night at Schoolyard Beer Hall in Denver. Friday June 12, 5–9 PM. Name tags + color stickers at the door, free drinks for singles who work the room and the first 10 couples that bring a single, couples pitch their single friends at 6:30. Dating in person.">
+<meta name="description" content="Denver's friends-of-friends dating event at Schoolyard Beer Hall. Friday June 12, 5–9 PM. 100 spots, 21+, no cover. Dating in person.">
 <meta property="og:title" content="Come Mingle, Bring Your Singles · Fri Jun 12 · Schoolyard Denver">
-<meta property="og:description" content="Friends of friends. Name tags + color stickers at the door. Couples pitch their singles. Free drinks for singles who chat with 3+ people and the first 10 couples that bring one. 100 spots, 21+, no cover. Dating in person.">
+<meta property="og:description" content="Bring the single you've been trying to set up for years. 100 friends-of-friends in a Denver beer hall. Friday June 12, 5–9 PM. 21+, no cover. Dating in person.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://bringyoursingles.com/">
 <meta property="og:image" content="https://bringyoursingles.com/og.png">
@@ -24,7 +24,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Come Mingle, Bring Your Singles · Fri Jun 12 · Schoolyard Denver">
-<meta name="twitter:description" content="Friends of friends. Name tags + color stickers at the door. Couples pitch their singles. Free drinks for singles who chat with 3+ people and the first 10 couples that bring one. 100 spots, 21+, no cover. Dating in person.">
+<meta name="twitter:description" content="Bring the single you've been trying to set up for years. 100 friends-of-friends in a Denver beer hall. Friday June 12, 5–9 PM. 21+, no cover. Dating in person.">
 <meta name="twitter:image" content="https://bringyoursingles.com/og.png">
 <meta name="twitter:image:alt" content="Come Mingle, Bring Your Singles — Friday June 12, 5–9 PM, Schoolyard Beer Hall, Denver.">
 
@@ -120,7 +120,6 @@
     "category": "Free admission"
   },
   "maximumAttendeeCapacity": 100,
-  "remainingAttendeeCapacity": 100,
   "isAccessibleForFree": true,
   "typicalAgeRange": "21+",
   "audience": {
@@ -843,6 +842,15 @@
     transition: background-color 0.15s;
   }
   .newsletter button:hover { background: var(--pink-deep); }
+  .newsletter-cta {
+    display: inline-block;
+    background: var(--pink); color: var(--cream);
+    padding: 16px 32px; font-weight: 700; letter-spacing: 2px;
+    font-size: 13px; text-transform: uppercase;
+    border-radius: 4px;
+    transition: background-color 0.15s;
+  }
+  .newsletter-cta:hover { background: var(--pink-deep); color: var(--cream); text-decoration: none; }
 
   /* Footer */
   footer { background: var(--black); padding: 48px 0 calc(40px + env(safe-area-inset-bottom)); text-align: center; border-top: 1px solid rgba(255,255,255,0.08); }
@@ -1149,7 +1157,7 @@
         <div class="time">5:00</div>
         <div>
           <h4>Doors Open</h4>
-          <p>Walk in, write your name, slap on a color sticker. First 10 couples that bring a single get a free beer at the bar.</p>
+          <p>Walk in, write your name, slap on a color sticker. Grab a drink, find a face you know.</p>
         </div>
       </div>
       <div class="row">
@@ -1329,16 +1337,13 @@
 
 </main>
 
-<!-- Newsletter — Vol. 02 capture. NOTE: replace FORM_ID below with your Formspree form ID. -->
+<!-- Newsletter — Vol. 02 capture. Currently a mailto CTA; swap in a Formspree/Buttondown/Mailchimp form when ready. -->
 <section class="newsletter">
   <div class="wrap">
     <div class="micro">— Can't make Vol. 01? —</div>
     <h2>Get first dibs on Vol. 02.</h2>
-    <p>One email when we lock the next date. No spam, no promotions, no "wyd."</p>
-    <form action="https://formspree.io/f/FORM_ID_HERE" method="POST">
-      <input type="email" name="email" placeholder="you@something.com" required>
-      <button type="submit">Notify me →</button>
-    </form>
+    <p>One email when we lock the next date. That's the whole list.</p>
+    <a class="newsletter-cta" href="mailto:holdenstirling@gmail.com?subject=Vol.%2002%20list&body=Add%20me%20to%20the%20Vol.%2002%20list.">Email me to get on the list →</a>
   </div>
 </section>
 
